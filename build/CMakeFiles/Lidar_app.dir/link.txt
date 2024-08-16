@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/Lidar_app.dir/main.cpp.o  -o Lidar_app -lLivox-SDK2 -lPayload-SDK-3.8.1 
