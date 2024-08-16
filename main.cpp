@@ -67,7 +67,7 @@ void PointCloudCallback(uint32_t handle, const uint8_t dev_type,
 				printf("x:%d,y:%d, z:%d\n", p_point_data[i].x, p_point_data[i].y, p_point_data[i].z);
 			}
 		}
-		printf("datanum: %d\n", coordinateArray.size());
+		printf("datanum: %zu\n", coordinateArray.size());
 	} else if (data->data_type == kLivoxLidarCartesianCoordinateLowData) {
 		LivoxLidarCartesianLowRawPoint *p_point_data =
 				(LivoxLidarCartesianLowRawPoint*) data->data;

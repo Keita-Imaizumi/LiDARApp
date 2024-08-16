@@ -3,13 +3,13 @@ project(Lidar_app)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(Lidar_app main.cpp)
+include_directories(/usr/local/include/Livox-SDK/include)
 
-add_subdirectory(include/Livox-SDK2)
-add_subdirectory(include/Payload-SDK-3.8.1)
+# Livox-SDK2のライブラリディレクトリを指定
+link_directories(/usr/local/lib)
 
-# includeディレクトリの指定
-target_include_directories(Lidar_app PRIVATE include/Livox-SDK2 include/Payload-SDK-3.8.1)
+# 実行可能ファイルのターゲットを作成
+add_executable(LivoxExample main.cpp)
 
-# libAとlibBをリンク
-target_link_libraries(Lidar_app PRIVATE Livox-SDK2 Payload-SDK-3.8.1)
+# Livox-SDK2ライブラリをリンク
+target_link_libraries(LivoxExample livox_sdk2)
