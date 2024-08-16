@@ -18,30 +18,30 @@
 #include <chrono>
 #include <iostream>
 
-#include "application.hpp"
-#include "dji_sdk_app_info.h"
-#include <dji_platform.h>
-#include <dji_logger.h>
-#include <dji_core.h>
-#include <dji_aircraft_info.h>
-#include <csignal>
-#include "dji_sdk_config.h"
+// #include "application.hpp"
+// #include "dji_sdk_app_info.h"
+// #include <dji_platform.h>
+// #include <dji_logger.h>
+// #include <dji_core.h>
+// #include <dji_aircraft_info.h>
+// #include <csignal>
+// #include "dji_sdk_config.h"
 
-#include "../common/osal/osal.h"
-#include "../common/osal/osal_fs.h"
-#include "../common/osal/osal_socket.h"
-#include "../manifold2/hal/hal_usb_bulk.h"
-#include "../manifold2/hal/hal_uart.h"
-#include "../manifold2/hal/hal_network.h"
+// #include "../common/osal/osal.h"
+// #include "../common/osal/osal_fs.h"
+// #include "../common/osal/osal_socket.h"
+// #include "../manifold2/hal/hal_usb_bulk.h"
+// #include "../manifold2/hal/hal_uart.h"
+// #include "../manifold2/hal/hal_network.h"
 
-#include "utils/dji_config_manager.h"
-#include <gimbal_emu/test_payload_gimbal_emu.h>
-#include <camera_emu/test_payload_cam_emu_media.h>
-#include <camera_emu/test_payload_cam_emu_base.h>
-#include "widget/test_widget.h"
-#include "widget/test_widget_speaker.h"
-#include <power_management/test_power_management.h>
-#include "data_transmission/test_data_transmission.h"
+// #include "utils/dji_config_manager.h"
+// #include <gimbal_emu/test_payload_gimbal_emu.h>
+// #include <camera_emu/test_payload_cam_emu_media.h>
+// #include <camera_emu/test_payload_cam_emu_base.h>
+// #include "widget/test_widget.h"
+// #include "widget/test_widget_speaker.h"
+// #include <power_management/test_power_management.h>
+// #include "data_transmission/test_data_transmission.h"
 
 void PointCloudCallback(uint32_t handle, const uint8_t dev_type,
 		LivoxLidarEthernetPacket *data, void *client_data) {
