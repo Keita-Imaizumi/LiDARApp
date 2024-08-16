@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "dji_logger.h": "c",
+        "test_data_transmission.h": "c"
+    }
+}
