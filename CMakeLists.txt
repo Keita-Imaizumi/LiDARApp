@@ -9,7 +9,7 @@ include_directories(/usr/local/include/Livox-SDK/include)
 link_directories(/usr/local/lib)
 
 # 実行可能ファイルのターゲットを作成
-add_executable(LivoxExample main.cpp)
+add_executable(Lidar_app main.cpp)
 
 # Livox-SDK2ライブラリをリンク
-target_link_libraries(LivoxExample livox_sdk2)
+target_link_libraries(Lidar_app livox_sdk2)
