@@ -14,7 +14,8 @@ link_directories(/usr/local/lib)
 # 実行可能ファイルのターゲットを作成
 add_executable(LidarApp main.cpp)
 
-
+include_directories(../include/Payload-SDK-3.8.1/samples/sample_c++/platform/linux/manifold2/application/*.c*)
+file(GLOB MODULE_APP_SRC application/*.cpp)
 
 execute_process(COMMAND uname -m
         OUTPUT_VARIABLE DEVICE_SYSTEM_ID)
@@ -35,4 +36,6 @@ target_link_libraries(LidarApp livox_lidar_sdk_shared)
 # include ディレクトリをインクルードパスに追加
 target_include_directories(LidarApp  PRIVATE ${PROJECT_SOURCE_DIR}/include)
 link_libraries(${CMAKE_CURRENT_LIST_DIR}/../include/Payload-SDK-3.8.1/psdk_lib/lib/${TOOLCHAIN_NAME}/libpayloadsdk.a -lstdc++)
-
+#psdkをリンク
+link_directories(${CMAKE_CURRENT_LIST_DIR}/../include/Payload-SDK-3.8.1/psdk_lib/lib/${TOOLCHAIN_NAME})
+link_libraries(${CMAKE_CURRENT_LIST_DIR}/../include/Payload-SDK-3.8.1/psdk_lib/lib/${TOOLCHAIN_NAME}/libpayloadsdk.a -lstdc++)
