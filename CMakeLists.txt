@@ -18,4 +18,4 @@ add_executable(LidarApp main.cpp)
 target_link_libraries(LidarApp livox_lidar_sdk_shared)
 
 # include ディレクトリをインクルードパスに追加
-target_include_directories(MyProject PRIVATE ${PROJECT_SOURCE_DIR}/include)
+target_include_directories(LidarApp  PRIVATE ${PROJECT_SOURCE_DIR}/include)
