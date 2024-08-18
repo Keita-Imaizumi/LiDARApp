@@ -11,14 +11,10 @@ include_directories(/usr/local/include)
 # Livox-SDK2のライブラリディレクトリを指定
 link_directories(/usr/local/lib)
 
-# 実行可能ファイルのターゲットを作成
-add_executable(LidarApp main.cpp)
-
-include_directories(../include/Payload-SDK-3.8.1/samples/sample_c++/platform/linux/manifold2/application/*.c*)
-file(GLOB MODULE_APP_SRC application/*.cpp)
-
+# プラットフォームに応じたツールチェーンの設定
 execute_process(COMMAND uname -m
-        OUTPUT_VARIABLE DEVICE_SYSTEM_ID)
+        OUTPUT_VARIABLE DEVICE_SYSTEM_ID
+        OUTPUT_STRIP_TRAILING_WHITESPACE)
 
 if (DEVICE_SYSTEM_ID MATCHES x86_64)
     set(TOOLCHAIN_NAME x86_64-linux-gnu-gcc)
@@ -30,12 +26,25 @@ else ()
     message(FATAL_ERROR "FATAL: Please confirm your platform.")
 endif ()
 
+# 実行可能ファイルのターゲットを作成
+add_executable(LidarApp main.cpp)
+
+# include ディレクトリをインクルードパスに追加
+target_include_directories(LidarApp PRIVATE ${PROJECT_SOURCE_DIR}/include)
+target_include_directories(LidarApp PRIVATE ../include/Payload-SDK-3.8.1/samples/sample_c++/platform/linux/manifold2/application)
+
+# ソースファイルを収集
+file(GLOB MODULE_APP_SRC application/*.cpp)
+
+# PSDKライブラリをリンク
+link_directories(${CMAKE_CURRENT_SOURCE_DIR}/../include/Payload-SDK-3.8.1/psdk_lib/lib/${TOOLCHAIN_NAME})
+target_link_libraries(LidarApp 
+    ${CMAKE_CURRENT_SOURCE_DIR}/../include/Payload-SDK-3.8.1/psdk_lib/lib/${TOOLCHAIN_NAME}/libpayloadsdk.a
+    stdc++
+)
+
 # Livox-SDK2ライブラリをリンク
 target_link_libraries(LidarApp livox_lidar_sdk_shared)
 
-# include ディレクトリをインクルードパスに追加
-target_include_directories(LidarApp  PRIVATE ${PROJECT_SOURCE_DIR}/include)
-link_libraries(${CMAKE_CURRENT_LIST_DIR}/../include/Payload-SDK-3.8.1/psdk_lib/lib/${TOOLCHAIN_NAME}/libpayloadsdk.a -lstdc++)
-#psdkをリンク
-link_directories(${CMAKE_CURRENT_LIST_DIR}/../include/Payload-SDK-3.8.1/psdk_lib/lib/${TOOLCHAIN_NAME})
-link_libraries(${CMAKE_CURRENT_LIST_DIR}/../include/Payload-SDK-3.8.1/psdk_lib/lib/${TOOLCHAIN_NAME}/libpayloadsdk.a -lstdc++)
+# プラットフォームに応じたライブラリリンク（例: OpenCV, FFMPEG など）
+# ここでは必要に応じて追加のライブラリをリンクすることができます
