@@ -28,7 +28,6 @@
 #include <csignal>
 #include "dji_low_speed_data_channel.h"
 #include "dji_error.h"
-#include "dji_sdk_config.h"
 
 
 void PointCloudCallback(uint32_t handle, const uint8_t dev_type,
