@@ -33,18 +33,15 @@ add_executable(LidarApp main.cpp)
 target_include_directories(LidarApp PRIVATE ${PROJECT_SOURCE_DIR}/include)
 target_include_directories(LidarApp PRIVATE ../include/Payload-SDK-3.8.1/samples/sample_c++/platform/linux/manifold2/application)
 
-# ソースファイルを収集
-file(GLOB MODULE_APP_SRC application/*.cpp)
-
 # PSDKライブラリをリンク
-link_directories(${CMAKE_CURRENT_SOURCE_DIR}/../include/Payload-SDK-3.8.1/psdk_lib/lib/${TOOLCHAIN_NAME})
-target_link_libraries(LidarApp 
-    ${CMAKE_CURRENT_SOURCE_DIR}/../include/Payload-SDK-3.8.1/psdk_lib/lib/${TOOLCHAIN_NAME}/libpayloadsdk.a
-    stdc++
-)
+set(PSDK_LIB_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../include/Payload-SDK-3.8.1/psdk_lib/lib/${TOOLCHAIN_NAME})
+if(EXISTS ${PSDK_LIB_PATH}/libpayloadsdk.a)
+    target_link_libraries(LidarApp ${PSDK_LIB_PATH}/libpayloadsdk.a)
+else()
+    message(FATAL_ERROR "PSDK library file not found: ${PSDK_LIB_PATH}/libpayloadsdk.a")
+endif()
 
 # Livox-SDK2ライブラリをリンク
 target_link_libraries(LidarApp livox_lidar_sdk_shared)
 
-# プラットフォームに応じたライブラリリンク（例: OpenCV, FFMPEG など）
-# ここでは必要に応じて追加のライブラリをリンクすることができます
+# その他のライブラリの設定が必要な場合は追加
