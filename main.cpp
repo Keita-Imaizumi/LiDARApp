@@ -18,33 +18,24 @@
 #include <chrono>
 #include <iostream>
 
-// #include "application.hpp"
-// #include "dji_sdk_app_info.h"
-// #include <dji_platform.h>
-// #include <dji_logger.h>
-// #include <dji_core.h>
-// #include <dji_aircraft_info.h>
-// #include <csignal>
-// #include "dji_sdk_config.h"
+#include "Payload-SDK-3.8.1/samples/sample_c++/platform/linux/manifold2/application/application.hpp"
+#include "Payload-SDK-3.8.1/samples/sample_c/module_sample/power_management/test_power_management.h"
 
-// #include "../common/osal/osal.h"
-// #include "../common/osal/osal_fs.h"
-// #include "../common/osal/osal_socket.h"
-// #include "../manifold2/hal/hal_usb_bulk.h"
-// #include "../manifold2/hal/hal_uart.h"
-// #include "../manifold2/hal/hal_network.h"
+#include <dji_platform.h>
+#include <dji_logger.h>
+#include <dji_core.h>
+#include <dji_aircraft_info.h>
+#include <csignal>
+#include "dji_low_speed_data_channel.h"
+#include "dji_error.h"
+#include "dji_sdk_config.h"
 
-// #include "utils/dji_config_manager.h"
-// #include <gimbal_emu/test_payload_gimbal_emu.h>
-// #include <camera_emu/test_payload_cam_emu_media.h>
-// #include <camera_emu/test_payload_cam_emu_base.h>
-// #include "widget/test_widget.h"
-// #include "widget/test_widget_speaker.h"
-// #include <power_management/test_power_management.h>
-// #include "data_transmission/test_data_transmission.h"
 
 void PointCloudCallback(uint32_t handle, const uint8_t dev_type,
 		LivoxLidarEthernetPacket *data, void *client_data) {
+	E_DjiChannelAddress channelAddress;
+	T_DjiReturnCode djiStat;
+	const uint8_t stopMessage[] = "Stop";
 	if (data == nullptr) {
 		return;
 	}
@@ -63,8 +54,14 @@ void PointCloudCallback(uint32_t handle, const uint8_t dev_type,
 					p_point_data[i].y* p_point_data[i].y +
 					p_point_data[i].z * p_point_data[i].z);
 			if (distance < 500 && distance >100){
+				channelAddress = DJI_CHANNEL_ADDRESS_MASTER_RC_APP;
 				coordinateArray.push_back({{p_point_data[i].x, p_point_data[i].y, p_point_data[i].z}});
 				printf("x:%d,y:%d, z:%d\n", p_point_data[i].x, p_point_data[i].y, p_point_data[i].z);
+				djiStat = DjiLowSpeedDataChannel_SendData(channelAddress, stopMessage, sizeof(stopMessage));
+				if (djiStat != DJI_ERROR_SYSTEM_MODULE_CODE_SUCCESS) {
+					USER_LOG_ERROR("Failed to send 'Stop' message.");
+				}
+
 			}
 		}
 		printf("datanum: %zu\n", coordinateArray.size());
@@ -209,8 +206,13 @@ void LivoxLidarPushMsgCallback(const uint32_t handle, const uint8_t dev_type,
 	return;
 }
 
-int main(int argc, const char *argv[]) {
-  // T_DjiReturnCode returnCode;
+int main(int argc, char **argv) {
+	//setup Enviroment of PSDK
+	Application application(argc, argv);
+    T_DjiOsalHandler *osalHandler = DjiPlatform_GetOsalHandler();
+    T_DjiReturnCode returnCode;
+    T_DjiTestApplyHighPowerHandler applyHighPowerHandler;
+  
 	if (argc != 2) {
 		printf("Params Invalid, must input config path.\n");
 		return -1;
@@ -223,12 +225,12 @@ int main(int argc, const char *argv[]) {
 		LivoxLidarSdkUninit();
 		return -1;
 	}
-
-  // returnCode = DjiTest_DataTransmissionStartService();
-  //   if (returnCode != DJI_ERROR_SYSTEM_MODULE_CODE_SUCCESS) {
-  //       USER_LOG_ERROR("widget sample init error");
-  //   }
-
+	//init Data channel
+	returnCode = DjiLowSpeedDataChannel_Init();
+    if (returnCode != DJI_ERROR_SYSTEM_MODULE_CODE_SUCCESS) {
+        USER_LOG_ERROR("init data transmission module error. Error is %llu", returnCode);
+        return DJI_ERROR_SYSTEM_MODULE_CODE_UNKNOWN;
+    }
 	// REQUIRED, to get point cloud data via 'PointCloudCallback'
 	SetLivoxLidarPointCloudCallBack(PointCloudCallback, nullptr);
 

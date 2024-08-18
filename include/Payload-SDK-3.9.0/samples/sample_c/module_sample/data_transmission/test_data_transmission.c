@@ -141,7 +141,7 @@ T_DjiReturnCode DjiTest_DataTransmissionStartService(void)
     } else {
         return DJI_ERROR_SYSTEM_MODULE_CODE_NONSUPPORT;
     }
-
+    //create task sending data
     if (osalHandler->TaskCreate("user_transmission_task", UserDataTransmission_Task,
                                 DATA_TRANSMISSION_TASK_STACK_SIZE, NULL, &s_userDataTransmissionThread) !=
         DJI_ERROR_SYSTEM_MODULE_CODE_SUCCESS) {
