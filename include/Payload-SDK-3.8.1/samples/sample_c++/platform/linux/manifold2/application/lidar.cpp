@@ -192,9 +192,9 @@ void LivoxLidarPushMsgCallback(const uint32_t handle, const uint8_t dev_type,
 }
 
 int InitLivoxSDK(const std::string& path) {
-  
 	if (!LivoxLidarSdkInit(path.c_str())) {
 		printf("Livox Init Failed\n");
+		printf(path.c_str());
 		LivoxLidarSdkUninit();
 		return -1;
 	}
