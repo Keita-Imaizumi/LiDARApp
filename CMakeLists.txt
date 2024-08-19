@@ -25,24 +25,21 @@ elseif (DEVICE_SYSTEM_ID MATCHES aarch64)
 else ()
     message(FATAL_ERROR "FATAL: Please confirm your platform.")
 endif ()
+
 file(GLOB_RECURSE MODULE_SAMPLE_SRC 
-        /include/Payload-SDK-3.8.1/samples/sample_c++/module_sample/liveview/*.c*
-        /include/Payload-SDK-3.8.1/samples/sample_c++/module_sample/camera_manager/*.c*
-        /include/Payload-SDK-3.8.1/samples/sample_c++/module_sample/camera_manager/*.c*
-        #added
-        /include/Payload-SDK-3.8.1/samples/sample_c++/module_sample/mobile/*.c*
-        #
-        /include/Payload-SDK-3.8.1/samples/sample_c++/module_sample/mop_channel/*.c*
-        /include/Payload-SDK-3.8.1/samples/sample_c++/module_sample/perception/*.c*
-        /include/Payload-SDK-3.8.1/samples/sample_c++/module_sample/gimbal/*.c*
-        /include/Payload-SDK-3.8.1/samples/sample_c++/module_sample/flight_controller/*.c*
-        /include/Payload-SDK-3.8.1/samples/sample_c++/module_sample/hms_manager/*.c*
-        /include/Payload-SDK-3.8.1/samples/sample_c/module_sample/*.c
-        
+        ${CMAKE_SOURCE_DIR}/include/Payload-SDK-3.8.1/samples/sample_c++/module_sample/liveview/*.c*
+        ${CMAKE_SOURCE_DIR}/include/Payload-SDK-3.8.1/samples/sample_c++/module_sample/camera_manager/*.c*
+        ${CMAKE_SOURCE_DIR}/include/Payload-SDK-3.8.1/samples/sample_c++/module_sample/mobile/*.c*
+        ${CMAKE_SOURCE_DIR}/include/Payload-SDK-3.8.1/samples/sample_c++/module_sample/mop_channel/*.c*
+        ${CMAKE_SOURCE_DIR}/include/Payload-SDK-3.8.1/samples/sample_c++/module_sample/perception/*.c*
+        ${CMAKE_SOURCE_DIR}/include/Payload-SDK-3.8.1/samples/sample_c++/module_sample/gimbal/*.c*
+        ${CMAKE_SOURCE_DIR}/include/Payload-SDK-3.8.1/samples/sample_c++/module_sample/flight_controller/*.c*
+        ${CMAKE_SOURCE_DIR}/include/Payload-SDK-3.8.1/samples/sample_c++/module_sample/hms_manager/*.c*
+        ${CMAKE_SOURCE_DIR}/include/Payload-SDK-3.8.1/samples/sample_c/module_sample/*.c
         )
-file(GLOB_RECURSE MODULE_COMMON_SRC include/Payload-SDK-3.8.1/samples/sample_c++/platform/linux/common/*.c*)
-file(GLOB_RECURSE MODULE_HAL_SRC include/Payload-SDK-3.8.1/samples/sample_c++/platform/linux/manifold2/hal/*.c)
-file(GLOB_RECURSE MODULE_APP_SRC include/Payload-SDK-3.8.1/samples/sample_c++/platform/linux/manifold2/application/*.c)
+file(GLOB_RECURSE MODULE_COMMON_SRC ${CMAKE_SOURCE_DIR}/include/Payload-SDK-3.8.1/samples/sample_c++/platform/linux/common/*.c*)
+file(GLOB_RECURSE MODULE_HAL_SRC ${CMAKE_SOURCE_DIR}/include/Payload-SDK-3.8.1/samples/sample_c++/platform/linux/manifold2/hal/*.c)
+file(GLOB_RECURSE MODULE_APP_SRC ${CMAKE_SOURCE_DIR}/include/Payload-SDK-3.8.1/samples/sample_c++/platform/linux/manifold2/application/*.c)
 
 # 実行可能ファイルのターゲットを作成
 add_executable(LidarApp 
@@ -53,19 +50,18 @@ add_executable(LidarApp
     ${MODULE_HAL_SRC}
 )
 
-
 # include ディレクトリをインクルードパスに追加
 target_include_directories(LidarApp PRIVATE 
-    ${PROJECT_SOURCE_DIR}/include
-    ${PROJECT_SOURCE_DIR}/include/Payload-SDK-3.8.1/samples/sample_c++/platform/linux/manifold2/application
-    ${PROJECT_SOURCE_DIR}/include/Payload-SDK-3.8.1/samples/sample_c++/platform/linux/common/osal
-    ${PROJECT_SOURCE_DIR}/include/Payload-SDK-3.8.1/samples/sample_c++/platform/linux/manifold2/hal
-    ${PROJECT_SOURCE_DIR}/include/Payload-SDK-3.8.1/samples/sample_c++/platform/linux/manifold2
-    ${PROJECT_SOURCE_DIR}/include/Payload-SDK-3.8.1/samples/sample_c/module_sample
+    ${CMAKE_SOURCE_DIR}/include
+    ${CMAKE_SOURCE_DIR}/include/Payload-SDK-3.8.1/samples/sample_c++/platform/linux/manifold2/application
+    ${CMAKE_SOURCE_DIR}/include/Payload-SDK-3.8.1/samples/sample_c++/platform/linux/common/osal
+    ${CMAKE_SOURCE_DIR}/include/Payload-SDK-3.8.1/samples/sample_c++/platform/linux/manifold2/hal
+    ${CMAKE_SOURCE_DIR}/include/Payload-SDK-3.8.1/samples/sample_c++/platform/linux/manifold2
+    ${CMAKE_SOURCE_DIR}/include/Payload-SDK-3.8.1/samples/sample_c/module_sample
 )
 
 # PSDKライブラリのパスを変数に保存
-set(PSDK_LIB_PATH "${CMAKE_CURRENT_SOURCE_DIR}/include/Payload-SDK-3.8.1/psdk_lib/lib/${TOOLCHAIN_NAME}/libpayloadsdk.a")
+set(PSDK_LIB_PATH "${CMAKE_SOURCE_DIR}/include/Payload-SDK-3.8.1/psdk_lib/lib/${TOOLCHAIN_NAME}/libpayloadsdk.a")
 
 # PSDKライブラリが存在するか確認
 if(NOT EXISTS ${PSDK_LIB_PATH})
@@ -75,6 +71,7 @@ endif()
 # PSDKライブラリをリンク
 target_link_libraries(LidarApp 
     ${PSDK_LIB_PATH}
-    stdc++
+    -lstdc++
     livox_lidar_sdk_shared
+    pthread
 )
