@@ -44,11 +44,11 @@ void PointCloudCallback(uint32_t handle, const uint8_t dev_type,
 				// printf("x:%d,y:%d, z:%d\n", p_point_data[i].x, p_point_data[i].y, p_point_data[i].z);
                 // 条件を満たした場合、stopSignalをtrueに設定
 				stopSignal = true;
-				printf("stopSignal: %s\n", stopSignal ? "true" : "false");
+				//printf("stopSignal: %s\n", stopSignal ? "true" : "false");
 				
 			}
             else {
-                stopSignal = false;
+                //stopSignal = false;
             }
 		}
 		//printf("datanum: %zu\n", coordinateArray.size());

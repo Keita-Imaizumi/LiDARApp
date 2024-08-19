@@ -181,10 +181,12 @@ static void *UserDataTransmission_Task(void *arg)
         channelAddress = DJI_CHANNEL_ADDRESS_MASTER_RC_APP;
         if (stopSignal) {
             djiStat = DjiLowSpeedDataChannel_SendData(channelAddress, dataToBeSent, sizeof(dataToBeSent));
+            print("sending");
             if (djiStat != DJI_ERROR_SYSTEM_MODULE_CODE_SUCCESS)
                 USER_LOG_ERROR("send data to mobile error.");
 
         }
+        printf(stopSignal);
         
         djiStat = DjiLowSpeedDataChannel_GetSendDataState(channelAddress, &state);
         if (djiStat == DJI_ERROR_SYSTEM_MODULE_CODE_SUCCESS) {
