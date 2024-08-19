@@ -186,7 +186,7 @@ static void *UserDataTransmission_Task(void *arg)
                 USER_LOG_ERROR("send data to mobile error.");
 
         }
-        printf(stopSignal);
+        printf("stopSignal: %d\n", stopSignal);  
         
         djiStat = DjiLowSpeedDataChannel_GetSendDataState(channelAddress, &state);
         if (djiStat == DJI_ERROR_SYSTEM_MODULE_CODE_SUCCESS) {
