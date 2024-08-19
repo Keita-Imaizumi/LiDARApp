@@ -25,11 +25,32 @@ elseif (DEVICE_SYSTEM_ID MATCHES aarch64)
 else ()
     message(FATAL_ERROR "FATAL: Please confirm your platform.")
 endif ()
+file(GLOB_RECURSE MODULE_SAMPLE_SRC 
+        /include/Payload-SDK-3.8.1/samples/sample_c++/module_sample/liveview/*.c*
+        /include/Payload-SDK-3.8.1/samples/sample_c++/module_sample/camera_manager/*.c*
+        /include/Payload-SDK-3.8.1/samples/sample_c++/module_sample/camera_manager/*.c*
+        #added
+        /include/Payload-SDK-3.8.1/samples/sample_c++/module_sample/mobile/*.c*
+        #
+        /include/Payload-SDK-3.8.1/samples/sample_c++/module_sample/mop_channel/*.c*
+        /include/Payload-SDK-3.8.1/samples/sample_c++/module_sample/perception/*.c*
+        /include/Payload-SDK-3.8.1/samples/sample_c++/module_sample/gimbal/*.c*
+        /include/Payload-SDK-3.8.1/samples/sample_c++/module_sample/flight_controller/*.c*
+        /include/Payload-SDK-3.8.1/samples/sample_c++/module_sample/hms_manager/*.c*
+        /include/Payload-SDK-3.8.1/samples/sample_c/module_sample/*.c
+        
+        )
+file(GLOB_RECURSE MODULE_COMMON_SRC include/Payload-SDK-3.8.1/samples/sample_c++/platform/linux/common/*.c*)
+file(GLOB_RECURSE MODULE_HAL_SRC include/Payload-SDK-3.8.1/samples/sample_c++/platform/linux/manifold2/hal/*.c)
+file(GLOB_RECURSE MODULE_APP_SRC include/Payload-SDK-3.8.1/samples/sample_c++/platform/linux/manifold2/application/*.c)
 
 # 実行可能ファイルのターゲットを作成
 add_executable(LidarApp 
     main.cpp
-    ${PROJECT_SOURCE_DIR}/include/Payload-SDK-3.8.1/samples/sample_c++/platform/linux/manifold2/application/application.cpp
+    ${MODULE_APP_SRC}
+    ${MODULE_SAMPLE_SRC}
+    ${MODULE_COMMON_SRC}
+    ${MODULE_HAL_SRC}
 )
 
 
