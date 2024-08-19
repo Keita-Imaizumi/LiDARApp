@@ -27,7 +27,7 @@ else ()
 endif ()
 
 # 実行可能ファイルのターゲットを作成
-add_executable(LidarApp main.cpp)
+add_executable(LidarApp main.cpp Application.cpp)
 
 # include ディレクトリをインクルードパスに追加
 target_include_directories(LidarApp PRIVATE ${PROJECT_SOURCE_DIR}/include)
