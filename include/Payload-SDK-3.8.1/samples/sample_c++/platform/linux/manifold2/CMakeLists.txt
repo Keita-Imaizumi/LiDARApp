@@ -71,7 +71,8 @@ add_executable(${PROJECT_NAME}
         ${MODULE_APP_SRC}
         ${MODULE_SAMPLE_SRC}
         ${MODULE_COMMON_SRC}
-        ${MODULE_HAL_SRC})
+        ${MODULE_HAL_SRC}
+        ../manifold2/application/lidar.cpp)
 
 # Try to see if user has OpenCV installed
 # if yes, default callback will display the image
@@ -145,6 +146,9 @@ endif ()
 target_link_libraries(${PROJECT_NAME} m)
 target_link_libraries(${PROJECT_NAME}
     livox_lidar_sdk_shared
+)
+include_directories(
+    ../manifold2/application  # lidar.hpp が配置されているディレクトリ
 )
 
 

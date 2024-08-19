@@ -5,8 +5,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include <iostream>
 #include <fstream>
-#include "livox_lidar_def.h"
-#include "livox_lidar_api.h"
+
 
 #ifdef __cplusplus
 extern "C" {
