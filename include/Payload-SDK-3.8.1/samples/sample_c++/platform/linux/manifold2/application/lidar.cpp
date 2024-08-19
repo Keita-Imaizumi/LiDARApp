@@ -25,10 +25,10 @@ void PointCloudCallback(uint32_t handle, const uint8_t dev_type,
 	if (data == nullptr) {
 		return;
 	}
-	printf(
-			"point cloud handle: %u, data_num: %d, data_type: %d, length: %d, frame_counter: %d\n",
-			handle, data->dot_num, data->data_type, data->length,
-			data->frame_cnt);
+	// printf(
+	// 		"point cloud handle: %u, data_num: %d, data_type: %d, length: %d, frame_counter: %d\n",
+	// 		handle, data->dot_num, data->data_type, data->length,
+	// 		data->frame_cnt);
 	if (data->data_type == kLivoxLidarCartesianCoordinateHighData) {
 		LivoxLidarCartesianHighRawPoint *p_point_data =
 				(LivoxLidarCartesianHighRawPoint*) data->data;
@@ -41,7 +41,7 @@ void PointCloudCallback(uint32_t handle, const uint8_t dev_type,
 					p_point_data[i].z * p_point_data[i].z);
 			if (distance < 500 && distance >100){
 				coordinateArray.push_back({{p_point_data[i].x, p_point_data[i].y, p_point_data[i].z}});
-				printf("x:%d,y:%d, z:%d\n", p_point_data[i].x, p_point_data[i].y, p_point_data[i].z);
+				// printf("x:%d,y:%d, z:%d\n", p_point_data[i].x, p_point_data[i].y, p_point_data[i].z);
                 // 条件を満たした場合、stopSignalをtrueに設定
 				stopSignal = true;
 			}
