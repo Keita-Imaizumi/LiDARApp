@@ -50,6 +50,8 @@ static T_DjiReturnCode ReceiveDataFromPayload(const uint8_t *data, uint16_t len)
 static T_DjiTaskHandle s_userDataTransmissionThread;
 static T_DjiAircraftInfoBaseInfo s_aircraftInfoBaseInfo;
 
+bool stopSignal = false;
+
 /* Exported functions definition ---------------------------------------------*/
 T_DjiReturnCode DjiTest_DataTransmissionStartService(void)
 {
@@ -60,6 +62,7 @@ T_DjiReturnCode DjiTest_DataTransmissionStartService(void)
         {10, 60, 30};
     char ipAddr[DJI_IP_ADDR_STR_SIZE_MAX];
     uint16_t port;
+    
 
     djiStat = DjiLowSpeedDataChannel_Init();
     if (djiStat != DJI_ERROR_SYSTEM_MODULE_CODE_SUCCESS) {
@@ -176,10 +179,13 @@ static void *UserDataTransmission_Task(void *arg)
         osalHandler->TaskSleepMs(1000 / DATA_TRANSMISSION_TASK_FREQ);
 
         channelAddress = DJI_CHANNEL_ADDRESS_MASTER_RC_APP;
-        djiStat = DjiLowSpeedDataChannel_SendData(channelAddress, dataToBeSent, sizeof(dataToBeSent));
-        if (djiStat != DJI_ERROR_SYSTEM_MODULE_CODE_SUCCESS)
-            USER_LOG_ERROR("send data to mobile error.");
+        if (stopSignal) {
+            djiStat = DjiLowSpeedDataChannel_SendData(channelAddress, dataToBeSent, sizeof(dataToBeSent));
+            if (djiStat != DJI_ERROR_SYSTEM_MODULE_CODE_SUCCESS)
+                USER_LOG_ERROR("send data to mobile error.");
 
+        }
+        
         djiStat = DjiLowSpeedDataChannel_GetSendDataState(channelAddress, &state);
         if (djiStat == DJI_ERROR_SYSTEM_MODULE_CODE_SUCCESS) {
             USER_LOG_DEBUG(

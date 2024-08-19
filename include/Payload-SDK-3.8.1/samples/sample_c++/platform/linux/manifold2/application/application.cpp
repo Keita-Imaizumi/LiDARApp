@@ -24,6 +24,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "application.hpp"
+#include "lidar.hpp"
 #include "dji_sdk_app_info.h"
 #include <dji_platform.h>
 #include <dji_logger.h>
@@ -349,6 +350,8 @@ void Application::DjiUser_ApplicationStart()
 #endif
 
 #ifdef CONFIG_MODULE_SAMPLE_DATA_TRANSMISSION_ON
+std::string configPath = "/home/ibm/DJIOnboardSDK/LiDARApplication/include/Livox-SDK2/samples/livox_lidar_quick_start/mid360_config.json";
+    InitLivoxSDK(configPath);
     returnCode = DjiTest_DataTransmissionStartService();
     if (returnCode != DJI_ERROR_SYSTEM_MODULE_CODE_SUCCESS) {
         USER_LOG_ERROR("widget sample init error");

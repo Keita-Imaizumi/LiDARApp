@@ -33,9 +33,8 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-
+extern bool stopSignal;
 /* Exported constants --------------------------------------------------------*/
-
 
 /* Exported types ------------------------------------------------------------*/
 

@@ -52,7 +52,7 @@ extern "C" {
 
 #define CONFIG_MODULE_SAMPLE_POWER_MANAGEMENT_ON
 
-//#define CONFIG_MODULE_SAMPLE_DATA_TRANSMISSION_ON
+#define CONFIG_MODULE_SAMPLE_DATA_TRANSMISSION_ON
 
 /* Exported types ------------------------------------------------------------*/
 

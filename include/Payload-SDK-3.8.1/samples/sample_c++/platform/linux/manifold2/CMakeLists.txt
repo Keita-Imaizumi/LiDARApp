@@ -8,6 +8,12 @@ set(CMAKE_C_COMPILER "gcc")
 set(CMAKE_CXX_COMPILER "g++")
 add_definitions(-D_GNU_SOURCE)
 
+# Livox-SDK2のインクルードディレクトリを指定
+include_directories(/usr/local/include)
+
+# Livox-SDK2のライブラリディレクトリを指定
+link_directories(/usr/local/lib)
+
 if (MEMORY_LEAK_CHECK_ON MATCHES TRUE)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=leak")
     set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fsanitize=leak")
@@ -137,6 +143,9 @@ if (NOT EXECUTABLE_OUTPUT_PATH)
 endif ()
 
 target_link_libraries(${PROJECT_NAME} m)
+target_link_libraries((${PROJECT_NAME})
+    livox_lidar_sdk_shared
+)
 
 add_custom_command(TARGET ${PROJECT_NAME}
         PRE_LINK COMMAND cmake ..
