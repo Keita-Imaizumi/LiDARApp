@@ -34,7 +34,7 @@ target_include_directories(LidarApp PRIVATE ${PROJECT_SOURCE_DIR}/include)
 target_include_directories(LidarApp PRIVATE ../include/Payload-SDK-3.8.1/samples/sample_c++/platform/linux/manifold2/application)
 
 # PSDKライブラリのパスを変数に保存
-set(PSDK_LIB_PATH "${CMAKE_CURRENT_SOURCE_DIR}/../include/Payload-SDK-3.8.1/psdk_lib/lib/${TOOLCHAIN_NAME}/libpayloadsdk.a")
+set(PSDK_LIB_PATH "${CMAKE_CURRENT_SOURCE_DIR}/include/Payload-SDK-3.8.1/psdk_lib/lib/${TOOLCHAIN_NAME}/libpayloadsdk.a")
 
 # PSDKライブラリが存在するか確認
 if(NOT EXISTS ${PSDK_LIB_PATH})
