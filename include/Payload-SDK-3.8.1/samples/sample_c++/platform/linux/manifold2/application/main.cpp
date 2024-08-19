@@ -106,6 +106,14 @@ start:
             }
             USER_LOG_INFO("Start rtk positioning sample successfully");
             break;
+        case 'z':
+            returnCode = DjiTest_DataTransmissionStartService();
+            if (returnCode != DJI_ERROR_SYSTEM_MODULE_CODE_SUCCESS) {
+                USER_LOG_ERROR("data transmission error");
+                break;
+            }
+            USER_LOG_INFO("Start rtk positioning sample successfully");
+            break;
         
         default:
             break;
