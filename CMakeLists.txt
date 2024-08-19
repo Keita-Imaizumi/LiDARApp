@@ -58,13 +58,7 @@ target_include_directories(LidarApp PRIVATE
     ${CMAKE_SOURCE_DIR}/include/Payload-SDK-3.8.1/samples/sample_c++/platform/linux/manifold2/hal
     ${CMAKE_SOURCE_DIR}/include/Payload-SDK-3.8.1/samples/sample_c++/platform/linux/manifold2
     ${CMAKE_SOURCE_DIR}/include/Payload-SDK-3.8.1/samples/sample_c/module_sample
-    ${CMAKE_SOURCE_DIR}/include/Payload-SDK-3.8.1/samples/sample_c++/module_sample/camera_manager # 追加
-    ${CMAKE_SOURCE_DIR}/include/Payload-SDK-3.8.1/samples/sample_c++/module_sample/flight_controller # 追加
-    ${CMAKE_SOURCE_DIR}/include/Payload-SDK-3.8.1/samples/sample_c++/module_sample/gimbal # 追加
-    ${CMAKE_SOURCE_DIR}/include/Payload-SDK-3.8.1/samples/sample_c++/module_sample/hms_manager # 追加
-    ${CMAKE_SOURCE_DIR}/include/Payload-SDK-3.8.1/samples/sample_c++/module_sample/liveview # 追加
-    ${CMAKE_SOURCE_DIR}/include/Payload-SDK-3.8.1/samples/sample_c++/module_sample/mobile # 追加
-    ${CMAKE_SOURCE_DIR}/include/Payload-SDK-3.8.1/samples/sample_c++/module_sample/perception # 追加
+    ${CMAKE_SOURCE_DIR}/include/Payload-SDK-3.8.1/samples/sample_c++/module_sample # 追加
 )
 
 # PSDKライブラリのパスを変数に保存
