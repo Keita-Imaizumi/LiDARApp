@@ -40,6 +40,7 @@ target_include_directories(LidarApp PRIVATE
     ${PROJECT_SOURCE_DIR}/include/Payload-SDK-3.8.1/samples/sample_c++/platform/linux/common/osal
     ${PROJECT_SOURCE_DIR}/include/Payload-SDK-3.8.1/samples/sample_c++/platform/linux/manifold2/hal
     ${PROJECT_SOURCE_DIR}/include/Payload-SDK-3.8.1/samples/sample_c++/platform/linux/manifold2
+    ${PROJECT_SOURCE_DIR}/include/Payload-SDK-3.8.1/samples/sample_c/module_sample
 )
 
 # PSDKライブラリのパスを変数に保存
