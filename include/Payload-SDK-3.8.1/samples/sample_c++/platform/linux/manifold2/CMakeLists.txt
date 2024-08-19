@@ -143,9 +143,10 @@ if (NOT EXECUTABLE_OUTPUT_PATH)
 endif ()
 
 target_link_libraries(${PROJECT_NAME} m)
-target_link_libraries((${PROJECT_NAME})
+target_link_libraries(${PROJECT_NAME}
     livox_lidar_sdk_shared
 )
+
 
 add_custom_command(TARGET ${PROJECT_NAME}
         PRE_LINK COMMAND cmake ..
