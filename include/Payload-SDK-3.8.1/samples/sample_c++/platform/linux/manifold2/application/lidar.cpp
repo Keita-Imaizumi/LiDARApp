@@ -8,7 +8,7 @@
 #include <unistd.h>
 #include <arpa/inet.h>
 #endif
-
+#include "lidar.hpp"
 #include <cmath>
 #include <vector>
 #include <stdio.h>
