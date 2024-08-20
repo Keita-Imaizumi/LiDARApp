@@ -48,7 +48,7 @@ void PointCloudCallback(uint32_t handle, const uint8_t dev_type,
 				
 			}
             else {
-                //stopSignal = false;
+                stopSignal = false;
             }
 		}
 		//printf("datanum: %zu\n", coordinateArray.size());
