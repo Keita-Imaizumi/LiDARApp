@@ -212,12 +212,12 @@ int InitLivoxSDK(const std::string& path) {
 	// REQUIRED, to get a handle to targeted lidar and set its work mode to NORMAL
 	SetLivoxLidarInfoChangeCallback(LidarInfoChangeCallback, nullptr);
 
-#ifdef WIN32
-  Sleep(300000);
-#else
-	sleep(300);
-#endif
-	LivoxLidarSdkUninit();
-	printf("Livox Quick Start Demo End!\n");
+// #ifdef WIN32
+//   Sleep(300000);
+// #else
+// 	sleep(300);
+// #endif
+// 	LivoxLidarSdkUninit();
+ 	printf("set callback!\n");
 	return 0;
 }
