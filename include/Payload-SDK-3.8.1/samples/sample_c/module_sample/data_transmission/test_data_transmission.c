@@ -168,10 +168,11 @@ T_DjiReturnCode DjiTest_DataTransmissionStopService(void)
 static void *UserDataTransmission_Task(void *arg)
 {
     T_DjiReturnCode djiStat;
-    const uint8_t dataToBeSent[] = "DJI Data Transmission Test Data.";
     T_DjiDataChannelState state = {0};
     T_DjiOsalHandler *osalHandler = DjiPlatform_GetOsalHandler();
     E_DjiChannelAddress channelAddress;
+    const uint8_t stopMessage[] = "STOP";
+    const uint8_t forwardMessage[] = "FORWARD";
 
     USER_UTIL_UNUSED(arg);
 
@@ -180,13 +181,17 @@ static void *UserDataTransmission_Task(void *arg)
 
         channelAddress = DJI_CHANNEL_ADDRESS_MASTER_RC_APP;
         if (stopSignal) {
-            djiStat = DjiLowSpeedDataChannel_SendData(channelAddress, dataToBeSent, sizeof(dataToBeSent));
-            printf("sending");
+            djiStat = DjiLowSpeedDataChannel_SendData(channelAddress, stopMessage, sizeof(stopMessage));
             if (djiStat != DJI_ERROR_SYSTEM_MODULE_CODE_SUCCESS)
                 USER_LOG_ERROR("send data to mobile error.");
 
         }
-        printf("stopSignal: %d\n", stopSignal);  
+        else {
+            djiStat = DjiLowSpeedDataChannel_SendData(channelAddress, forwardMessage, sizeof(forwardMessage));
+            if (djiStat != DJI_ERROR_SYSTEM_MODULE_CODE_SUCCESS)
+                USER_LOG_ERROR("send data to mobile error.");
+
+        }
         
         djiStat = DjiLowSpeedDataChannel_GetSendDataState(channelAddress, &state);
         if (djiStat == DJI_ERROR_SYSTEM_MODULE_CODE_SUCCESS) {
@@ -201,7 +206,7 @@ static void *UserDataTransmission_Task(void *arg)
         if (s_aircraftInfoBaseInfo.aircraftType == DJI_AIRCRAFT_TYPE_M30 ||
             s_aircraftInfoBaseInfo.aircraftType == DJI_AIRCRAFT_TYPE_M30T) {
             channelAddress = DJI_CHANNEL_ADDRESS_CLOUD_API;
-            djiStat = DjiLowSpeedDataChannel_SendData(channelAddress, dataToBeSent, sizeof(dataToBeSent));
+            djiStat = DjiLowSpeedDataChannel_SendData(channelAddress, stopMessage, sizeof(stopMessage));
             if (djiStat != DJI_ERROR_SYSTEM_MODULE_CODE_SUCCESS)
                 USER_LOG_ERROR("send data to cloud error.");
 
@@ -220,7 +225,7 @@ static void *UserDataTransmission_Task(void *arg)
             s_aircraftInfoBaseInfo.mountPosition == DJI_MOUNT_POSITION_PAYLOAD_PORT_NO2 ||
             s_aircraftInfoBaseInfo.mountPosition == DJI_MOUNT_POSITION_PAYLOAD_PORT_NO3) {
             channelAddress = DJI_CHANNEL_ADDRESS_EXTENSION_PORT;
-            djiStat = DjiLowSpeedDataChannel_SendData(channelAddress, dataToBeSent, sizeof(dataToBeSent));
+            djiStat = DjiLowSpeedDataChannel_SendData(channelAddress, stopMessage, sizeof(stopMessage));
             if (djiStat != DJI_ERROR_SYSTEM_MODULE_CODE_SUCCESS)
                 USER_LOG_ERROR("send data to extension port error.");
 
@@ -236,7 +241,7 @@ static void *UserDataTransmission_Task(void *arg)
 
             if (DjiPlatform_GetSocketHandler() != NULL) {
 #ifdef SYSTEM_ARCH_LINUX
-                djiStat = DjiHighSpeedDataChannel_SendDataStreamData(dataToBeSent, sizeof(dataToBeSent));
+                djiStat = DjiHighSpeedDataChannel_SendDataStreamData(stopMessage, sizeof(stopMessage));
                 if (djiStat != DJI_ERROR_SYSTEM_MODULE_CODE_SUCCESS)
                     USER_LOG_ERROR("send data to data stream error.");
 
@@ -253,7 +258,7 @@ static void *UserDataTransmission_Task(void *arg)
         } else if (s_aircraftInfoBaseInfo.mountPosition == DJI_MOUNT_POSITION_EXTENSION_PORT
                     || DJI_MOUNT_POSITION_EXTENSION_LITE_PORT == s_aircraftInfoBaseInfo.mountPosition) {
             channelAddress = DJI_CHANNEL_ADDRESS_PAYLOAD_PORT_NO1;
-            djiStat = DjiLowSpeedDataChannel_SendData(channelAddress, dataToBeSent, sizeof(dataToBeSent));
+            djiStat = DjiLowSpeedDataChannel_SendData(channelAddress, stopMessage, sizeof(stopMessage));
             if (djiStat != DJI_ERROR_SYSTEM_MODULE_CODE_SUCCESS)
                 USER_LOG_ERROR("send data to extension port error.");
 
