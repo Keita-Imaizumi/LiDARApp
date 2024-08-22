@@ -176,17 +176,15 @@ static void *UserDataTransmission_Task(void *arg)
     const uint8_t stopMessage[] = "STOP";
     const uint8_t forwardMessage[] = "FORWARD";
     // int型のサイズに合わせたバッファを準備
-    uint8_t data[sizeof(int)];
-
-    // int型の値をバイト配列に変換
-    memcpy(data, &data_num, sizeof(int));
-
     USER_UTIL_UNUSED(arg);
 
     while (1) {
         osalHandler->TaskSleepMs(1000 / DATA_TRANSMISSION_TASK_FREQ);
         printf("datanum: %zu\n", data_num);
         channelAddress = DJI_CHANNEL_ADDRESS_MASTER_RC_APP;
+        uint8_t data[sizeof(int)];
+        // int型の値をバイト配列に変換
+        memcpy(data, &data_num, sizeof(int));
         djiStat = DjiLowSpeedDataChannel_SendData(channelAddress, data, sizeof(data));
         if (djiStat != DJI_ERROR_SYSTEM_MODULE_CODE_SUCCESS)
             USER_LOG_ERROR("send data to mobile error.");

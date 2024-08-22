@@ -40,8 +40,8 @@ void PointCloudCallback(uint32_t handle, const uint8_t dev_type,
 			if (
 				p_point_data[i].x >= 0 && p_point_data[i].x <= 1000 
 				&&
-				p_point_data[i].y >= -100 && p_point_data[i].y <= 100 &&
-				p_point_data[i].z >= -100 && p_point_data[i].z <= 100
+				p_point_data[i].y >= -40 && p_point_data[i].y <= 40 &&
+				p_point_data[i].z >= -40 && p_point_data[i].z <= 40
 				) {
 				count++;
 			}
