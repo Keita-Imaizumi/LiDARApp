@@ -20,6 +20,7 @@
 #include "data_transmission/test_data_transmission.h"
 
 extern bool stopSignal;
+extern int data_num;
 void PointCloudCallback(uint32_t handle, const uint8_t dev_type,
 		LivoxLidarEthernetPacket *data, void *client_data) {
 	if (data == nullptr) {
@@ -32,25 +33,28 @@ void PointCloudCallback(uint32_t handle, const uint8_t dev_type,
 	if (data->data_type == kLivoxLidarCartesianCoordinateHighData) {
 		LivoxLidarCartesianHighRawPoint *p_point_data =
 				(LivoxLidarCartesianHighRawPoint*) data->data;
-	   std::vector<std::vector<std::vector<int>>> coordinateArray;
-		for (uint32_t i = 0; i < data->dot_num; i++) {
-//			printf("x:%d,y:%d, z:%d\n", p_point_data[i].x, p_point_data[i].y, p_point_data[i].z);
-			//distance:[mm]
-			float distance = std::sqrt(p_point_data[i].x * p_point_data[i].x +
-					p_point_data[i].y* p_point_data[i].y +
-					p_point_data[i].z * p_point_data[i].z);
-			if (distance < 500 && distance >100){
-				coordinateArray.push_back({{p_point_data[i].x, p_point_data[i].y, p_point_data[i].z}});
-				// printf("x:%d,y:%d, z:%d\n", p_point_data[i].x, p_point_data[i].y, p_point_data[i].z);
-                // 条件を満たした場合、stopSignalをtrueに設定
-				stopSignal = true;
-				//printf("stopSignal: %s\n", stopSignal ? "true" : "false");
-				
-			}
-            else {
-                stopSignal = false;
-            }
-		}
+	   	std::vector<std::vector<std::vector<int>>> coordinateArray;
+		//点群フィルタリング(mm)
+		data_num = countFilteredPoints(p_point_data, data->dot_num, 
+			0, 1000, 
+			-40, 40,
+			-40, 40
+			);
+		// for (uint32_t i = 0; i < data->dot_num; i++) {
+		// 	printf("x:%d,y:%d, z:%d\n", p_point_data[i].x, p_point_data[i].y, p_point_data[i].z);
+		// 	//distance:[mm]
+		// 	float distance = std::sqrt(p_point_data[i].x * p_point_data[i].x +
+		// 			p_point_data[i].y* p_point_data[i].y +
+		// 			p_point_data[i].z * p_point_data[i].z);
+		// 	if (distance < 500 && distance >100){
+		// 		coordinateArray.push_back({{p_point_data[i].x, p_point_data[i].y, p_point_data[i].z}});
+        //         // 条件を満たした場合、stopSignalをtrueに設定
+		// 		stopSignal = true;
+		// 	}
+        //     else {
+        //         stopSignal = false;
+        //     }
+		// }
 		//printf("datanum: %zu\n", coordinateArray.size());
 	} else if (data->data_type == kLivoxLidarCartesianCoordinateLowData) {
 		LivoxLidarCartesianLowRawPoint *p_point_data =
@@ -58,6 +62,23 @@ void PointCloudCallback(uint32_t handle, const uint8_t dev_type,
 	} else if (data->data_type == kLivoxLidarSphericalCoordinateData) {
 		LivoxLidarSpherPoint *p_point_data = (LivoxLidarSpherPoint*) data->data;
 	}
+}
+int countFilteredPoints(LivoxLidarCartesianHighRawPoint* p_point_data, uint32_t dot_num, 
+                        int32_t x_min, int32_t x_max, 
+                        int32_t y_min, int32_t y_max, 
+                        int32_t z_min, int32_t z_max) {
+    int count = 0;
+
+    for (uint32_t i = 0; i < dot_num; i++) {
+        // x, y, z の条件をチェック
+        if (p_point_data[i].x >= x_min && p_point_data[i].x <= x_max &&
+            p_point_data[i].y >= y_min && p_point_data[i].y <= y_max &&
+            p_point_data[i].z >= z_min && p_point_data[i].z <= z_max) {
+            count++;
+        }
+    }
+
+    return count;
 }
 
 void ImuDataCallback(uint32_t handle, const uint8_t dev_type,

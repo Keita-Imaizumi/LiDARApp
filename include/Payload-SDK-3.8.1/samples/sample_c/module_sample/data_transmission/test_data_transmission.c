@@ -22,7 +22,8 @@
  *********************************************************************
  */
 
-
+#include <stdint.h>
+#include <string.h>
 /* Includes ------------------------------------------------------------------*/
 #include "test_data_transmission.h"
 #include "dji_logger.h"
@@ -51,6 +52,7 @@ static T_DjiTaskHandle s_userDataTransmissionThread;
 static T_DjiAircraftInfoBaseInfo s_aircraftInfoBaseInfo;
 
 bool stopSignal = false;
+int data_num = 0;
 
 /* Exported functions definition ---------------------------------------------*/
 T_DjiReturnCode DjiTest_DataTransmissionStartService(void)
@@ -173,6 +175,11 @@ static void *UserDataTransmission_Task(void *arg)
     E_DjiChannelAddress channelAddress;
     const uint8_t stopMessage[] = "STOP";
     const uint8_t forwardMessage[] = "FORWARD";
+    // int型のサイズに合わせたバッファを準備
+    uint8_t data[sizeof(int)];
+
+    // int型の値をバイト配列に変換
+    memcpy(data, &data_num, sizeof(int));
 
     USER_UTIL_UNUSED(arg);
 
@@ -180,18 +187,10 @@ static void *UserDataTransmission_Task(void *arg)
         osalHandler->TaskSleepMs(1000 / DATA_TRANSMISSION_TASK_FREQ);
 
         channelAddress = DJI_CHANNEL_ADDRESS_MASTER_RC_APP;
-        if (stopSignal) {
-            djiStat = DjiLowSpeedDataChannel_SendData(channelAddress, stopMessage, sizeof(stopMessage));
-            if (djiStat != DJI_ERROR_SYSTEM_MODULE_CODE_SUCCESS)
-                USER_LOG_ERROR("send data to mobile error.");
+        djiStat = DjiLowSpeedDataChannel_SendData(channelAddress, data_num, sizeof(data_num));
+        if (djiStat != DJI_ERROR_SYSTEM_MODULE_CODE_SUCCESS)
+            USER_LOG_ERROR("send data to mobile error.");
 
-        }
-        else {
-            djiStat = DjiLowSpeedDataChannel_SendData(channelAddress, forwardMessage, sizeof(forwardMessage));
-            if (djiStat != DJI_ERROR_SYSTEM_MODULE_CODE_SUCCESS)
-                USER_LOG_ERROR("send data to mobile error.");
-
-        }
         
         djiStat = DjiLowSpeedDataChannel_GetSendDataState(channelAddress, &state);
         if (djiStat == DJI_ERROR_SYSTEM_MODULE_CODE_SUCCESS) {
