@@ -185,7 +185,7 @@ static void *UserDataTransmission_Task(void *arg)
 
     while (1) {
         osalHandler->TaskSleepMs(1000 / DATA_TRANSMISSION_TASK_FREQ);
-
+        printf("datanum: %zu\n", data_num);
         channelAddress = DJI_CHANNEL_ADDRESS_MASTER_RC_APP;
         djiStat = DjiLowSpeedDataChannel_SendData(channelAddress, data, sizeof(data));
         if (djiStat != DJI_ERROR_SYSTEM_MODULE_CODE_SUCCESS)
