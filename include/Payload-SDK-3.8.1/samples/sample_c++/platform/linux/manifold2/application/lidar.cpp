@@ -35,6 +35,17 @@ void PointCloudCallback(uint32_t handle, const uint8_t dev_type,
 				(LivoxLidarCartesianHighRawPoint*) data->data;
 	   	std::vector<std::vector<std::vector<int>>> coordinateArray;
 		//点群フィルタリング(mm)
+
+		int count = 0;
+
+		for (uint32_t i = 0; i < data->dot_num; i++) {
+			// x, y, z の条件をチェック
+			if (p_point_data[i].x >= 0 && p_point_data[i].x <= 1000 &&
+				p_point_data[i].y >= -40 && p_point_data[i].y <= 40 &&
+				p_point_data[i].z >= -40 && p_point_data[i].z <= 40) {
+				count++;
+			}
+    }
 		data_num = countFilteredPoints(p_point_data, data->dot_num, 
 			0, 1000, 
 			-40, 40,
