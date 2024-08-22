@@ -69,7 +69,7 @@ void PointCloudCallback(uint32_t handle, const uint8_t dev_type,
 
         // フィルタリングされた点群の数
         size_t filtered_count = filtered_points.size();
-		printf("datanum: %u",  filtered_count);
+		printf("datanum: %zu",  filtered_count);
 	} else if (data->data_type == kLivoxLidarCartesianCoordinateLowData) {
 		LivoxLidarCartesianLowRawPoint *p_point_data =
 				(LivoxLidarCartesianLowRawPoint*) data->data;
