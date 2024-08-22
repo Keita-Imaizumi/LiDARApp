@@ -34,14 +34,18 @@ void PointCloudCallback(uint32_t handle, const uint8_t dev_type,
 		LivoxLidarCartesianHighRawPoint *p_point_data =
 				(LivoxLidarCartesianHighRawPoint*) data->data;
 	   	std::vector<std::vector<std::vector<int>>> coordinateArray;
+		
+	} else if (data->data_type == kLivoxLidarCartesianCoordinateLowData) {
+		LivoxLidarCartesianLowRawPoint *p_point_data =
+				(LivoxLidarCartesianLowRawPoint*) data->data;
 		int count = 0;
 		for (uint32_t i = 0; i < data->dot_num; i++) {
 			// x, y, z の条件をチェック
 			if (
-				p_point_data[i].x >= 500 && p_point_data[i].x <= 1000 
+				p_point_data[i].x >= 10 && p_point_data[i].x <= 100 
 				&&
-				p_point_data[i].y >= -40 && p_point_data[i].y <= 40 &&
-				p_point_data[i].z >= -40 && p_point_data[i].z <= 40
+				p_point_data[i].y >= -4 && p_point_data[i].y <= 4 &&
+				p_point_data[i].z >= -4 && p_point_data[i].z <= 4
 				) {
 				count++;
 			}
@@ -64,9 +68,6 @@ void PointCloudCallback(uint32_t handle, const uint8_t dev_type,
         //     }
 		// }
 		//printf("datanum: %zu\n", coordinateArray.size());
-	} else if (data->data_type == kLivoxLidarCartesianCoordinateLowData) {
-		LivoxLidarCartesianLowRawPoint *p_point_data =
-				(LivoxLidarCartesianLowRawPoint*) data->data;
 	} else if (data->data_type == kLivoxLidarSphericalCoordinateData) {
 		LivoxLidarSpherPoint *p_point_data = (LivoxLidarSpherPoint*) data->data;
 	}
