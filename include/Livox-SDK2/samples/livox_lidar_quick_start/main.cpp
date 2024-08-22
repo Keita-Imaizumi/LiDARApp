@@ -53,19 +53,23 @@ void PointCloudCallback(uint32_t handle, const uint8_t dev_type,
 	if (data->data_type == kLivoxLidarCartesianCoordinateHighData) {
 		LivoxLidarCartesianHighRawPoint *p_point_data =
 				(LivoxLidarCartesianHighRawPoint*) data->data;
-	   std::vector<std::vector<std::vector<int>>> coordinateArray;
-		for (uint32_t i = 0; i < data->dot_num; i++) {
-//			printf("x:%d,y:%d, z:%d\n", p_point_data[i].x, p_point_data[i].y, p_point_data[i].z);
-			//distance:[mm]
-			float distance = std::sqrt(p_point_data[i].x * p_point_data[i].x +
-					p_point_data[i].y* p_point_data[i].y +
-					p_point_data[i].z * p_point_data[i].z);
-			if (distance < 500 && distance >100){
-				coordinateArray.push_back({{p_point_data[i].x, p_point_data[i].y, p_point_data[i].z}});
-				printf("x:%d,y:%d, z:%d\n", p_point_data[i].x, p_point_data[i].y, p_point_data[i].z);
-			}
-		}
-		printf("datanum: %d\n", coordinateArray.size());
+	   LivoxLidarCartesianHighRawPoint *p_point_data =
+				(LivoxLidarCartesianHighRawPoint*) data->data;
+	   	std::vector<LivoxLidarCartesianHighRawPoint> filtered_points;
+        for (uint32_t i = 0; i < data->dot_num; i++) {
+            int32_t x = p_point_data[i].x;
+            int32_t y = p_point_data[i].y;
+            int32_t z = p_point_data[i].z;
+
+            // X軸の値が0〜1000mmの範囲かを確認
+            if (x >= 0 && x <= 1000) {
+                filtered_points.push_back(p_point_data[i]);
+            }
+        }
+
+        // フィルタリングされた点群の数
+        size_t filtered_count = filtered_points.size();
+		printf("datanum: %u",  filtered_count);
 	} else if (data->data_type == kLivoxLidarCartesianCoordinateLowData) {
 		LivoxLidarCartesianLowRawPoint *p_point_data =
 				(LivoxLidarCartesianLowRawPoint*) data->data;
