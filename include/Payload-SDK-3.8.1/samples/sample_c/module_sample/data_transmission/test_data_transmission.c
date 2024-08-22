@@ -187,7 +187,7 @@ static void *UserDataTransmission_Task(void *arg)
         osalHandler->TaskSleepMs(1000 / DATA_TRANSMISSION_TASK_FREQ);
 
         channelAddress = DJI_CHANNEL_ADDRESS_MASTER_RC_APP;
-        djiStat = DjiLowSpeedDataChannel_SendData(channelAddress, data_num, sizeof(data_num));
+        djiStat = DjiLowSpeedDataChannel_SendData(channelAddress, data, sizeof(data));
         if (djiStat != DJI_ERROR_SYSTEM_MODULE_CODE_SUCCESS)
             USER_LOG_ERROR("send data to mobile error.");
 
