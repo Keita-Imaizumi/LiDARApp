@@ -51,8 +51,6 @@ void PointCloudCallback(uint32_t handle, const uint8_t dev_type,
 			handle, data->dot_num, data->data_type, data->length,
 			data->frame_cnt);
 	if (data->data_type == kLivoxLidarCartesianCoordinateHighData) {
-		LivoxLidarCartesianHighRawPoint *p_point_data =
-				(LivoxLidarCartesianHighRawPoint*) data->data;
 	   LivoxLidarCartesianHighRawPoint *p_point_data =
 				(LivoxLidarCartesianHighRawPoint*) data->data;
 	   	std::vector<LivoxLidarCartesianHighRawPoint> filtered_points;
