@@ -46,10 +46,10 @@ void PointCloudCallback(uint32_t handle, const uint8_t dev_type,
 	if (data == nullptr) {
 		return;
 	}
-	printf(
-			"point cloud handle: %u, data_num: %d, data_type: %d, length: %d, frame_counter: %d\n",
-			handle, data->dot_num, data->data_type, data->length,
-			data->frame_cnt);
+	// printf(
+	// 		"point cloud handle: %u, data_num: %d, data_type: %d, length: %d, frame_counter: %d\n",
+	// 		handle, data->dot_num, data->data_type, data->length,
+	// 		data->frame_cnt);
 	if (data->data_type == kLivoxLidarCartesianCoordinateHighData) {
 	   LivoxLidarCartesianHighRawPoint *p_point_data =
 				(LivoxLidarCartesianHighRawPoint*) data->data;
@@ -81,10 +81,11 @@ void ImuDataCallback(uint32_t handle, const uint8_t dev_type,
 	if (data == nullptr) {
 		return;
 	}
-	printf(
-			"Imu data callback handle:%u, data_num:%u, data_type:%u, length:%u, frame_counter:%u.\n",
-			handle, data->dot_num, data->data_type, data->length,
-			data->frame_cnt);
+	
+	// printf(
+	// 		"Imu data callback handle:%u, data_num:%u, data_type:%u, length:%u, frame_counter:%u.\n",
+	// 		handle, data->dot_num, data->data_type, data->length,
+	// 		data->frame_cnt);
 }
 
 // void OnLidarSetIpCallback(livox_vehicle_status status, uint32_t handle, uint8_t ret_code, void*) {
