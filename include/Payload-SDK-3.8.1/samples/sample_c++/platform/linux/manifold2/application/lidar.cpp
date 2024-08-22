@@ -40,14 +40,14 @@ void PointCloudCallback(uint32_t handle, const uint8_t dev_type,
 			if (
 				p_point_data[i].x >= 0 && p_point_data[i].x <= 1000 
 				&&
-				p_point_data[i].y >= -40 && p_point_data[i].y <= 40 &&
-				p_point_data[i].z >= -40 && p_point_data[i].z <= 40
+				p_point_data[i].y >= -100 && p_point_data[i].y <= 100 &&
+				p_point_data[i].z >= -100 && p_point_data[i].z <= 100
 				) {
 				count++;
 			}
     }
 		data_num = count;
-		printf("datanum: %zu\n", data_num);
+		//printf("datanum: %zu\n", data_num);
 		// for (uint32_t i = 0; i < data->dot_num; i++) {
 		// 	printf("x:%d,y:%d, z:%d\n", p_point_data[i].x, p_point_data[i].y, p_point_data[i].z);
 		// 	//distance:[mm]
@@ -209,7 +209,7 @@ int InitLivoxSDK(const std::string& path) {
 	if (!LivoxLidarSdkInit(path.c_str())) {
 		printf("Livox Init Failed\n");
 		printf(path.c_str());
-		LivoxLidarSdkUninit();
+		//LivoxLidarSdkUninit();
 		return -1;
 	}
 	// REQUIRED, to get point cloud data via 'PointCloudCallback'
