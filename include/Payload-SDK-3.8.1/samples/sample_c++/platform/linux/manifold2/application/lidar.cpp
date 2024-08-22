@@ -38,7 +38,7 @@ void PointCloudCallback(uint32_t handle, const uint8_t dev_type,
 		for (uint32_t i = 0; i < data->dot_num; i++) {
 			// x, y, z の条件をチェック
 			if (
-				p_point_data[i].x >= 0 && p_point_data[i].x <= 1000 
+				p_point_data[i].x >= 500 && p_point_data[i].x <= 1000 
 				&&
 				p_point_data[i].y >= -40 && p_point_data[i].y <= 40 &&
 				p_point_data[i].z >= -40 && p_point_data[i].z <= 40
