@@ -40,11 +40,11 @@ void PointCloudCallback(uint32_t handle, const uint8_t dev_type,
             int32_t z = p_point_data[i].z;
 
             // X軸の値が0〜1000mmの範囲かを確認
-            if (x >= 0 && x <= 1000 && y == 0 && z == 0) {
+            if (x >= 100 && x <= 1000 && y > -100 && y < 100 && z > -100 && z < 100) {
                 filtered_points.push_back(p_point_data[i]);
+                printf("x: %u, y: %u, z: %u\n", x, y, z);
             }
         }
-
         // フィルタリングされた点群の数
         size_t filtered_count = filtered_points.size();
         data_num = filtered_count;
