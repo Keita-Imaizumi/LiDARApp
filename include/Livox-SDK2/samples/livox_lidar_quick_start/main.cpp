@@ -60,14 +60,16 @@ void PointCloudCallback(uint32_t handle, const uint8_t dev_type,
             int32_t z = p_point_data[i].z;
 
             // X軸の値が0〜1000mmの範囲かを確認
-            if (x >= 0 && x <= 1000) {
+            if (x > 0 && x < 100) {
                 filtered_points.push_back(p_point_data[i]);
             }
         }
 
         // フィルタリングされた点群の数
         size_t filtered_count = filtered_points.size();
-		printf("datanum: %zu",  filtered_count);
+	if (filtered_count > 0){
+		printf("datanum: %u, filtered: %zu\n",data->dot_num, filtered_count);
+	}
 	} else if (data->data_type == kLivoxLidarCartesianCoordinateLowData) {
 		LivoxLidarCartesianLowRawPoint *p_point_data =
 				(LivoxLidarCartesianLowRawPoint*) data->data;

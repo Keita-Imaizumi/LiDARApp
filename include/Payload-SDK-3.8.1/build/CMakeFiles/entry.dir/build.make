@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1
+CMAKE_SOURCE_DIR = /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build
+CMAKE_BINARY_DIR = /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build
 
 # Utility rule file for entry.
 
@@ -67,6 +67,6 @@ CMakeFiles/entry.dir/clean:
 .PHONY : CMakeFiles/entry.dir/clean
 
 CMakeFiles/entry.dir/depend:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1 /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1 /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build/CMakeFiles/entry.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1 /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1 /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build/CMakeFiles/entry.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/entry.dir/depend
 

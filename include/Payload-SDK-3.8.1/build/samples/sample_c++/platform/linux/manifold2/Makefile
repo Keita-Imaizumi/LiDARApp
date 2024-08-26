@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1
+CMAKE_SOURCE_DIR = /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build
+CMAKE_BINARY_DIR = /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,14 +126,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build/CMakeFiles /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build/samples/sample_c++/platform/linux/manifold2/CMakeFiles/progress.marks
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f CMakeFiles/Makefile2 samples/sample_c++/platform/linux/manifold2/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build/CMakeFiles 0
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build/CMakeFiles /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build/samples/sample_c++/platform/linux/manifold2/CMakeFiles/progress.marks
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f CMakeFiles/Makefile2 samples/sample_c++/platform/linux/manifold2/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f CMakeFiles/Makefile2 samples/sample_c++/platform/linux/manifold2/clean
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f CMakeFiles/Makefile2 samples/sample_c++/platform/linux/manifold2/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,22 +143,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f CMakeFiles/Makefile2 samples/sample_c++/platform/linux/manifold2/preinstall
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f CMakeFiles/Makefile2 samples/sample_c++/platform/linux/manifold2/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f CMakeFiles/Makefile2 samples/sample_c++/platform/linux/manifold2/preinstall
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f CMakeFiles/Makefile2 samples/sample_c++/platform/linux/manifold2/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/rule:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f CMakeFiles/Makefile2 samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/rule
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f CMakeFiles/Makefile2 samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/rule
 .PHONY : samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/rule
 
 # Convenience name for target.
@@ -168,7 +168,7 @@ dji_sdk_demo_linux_cxx: samples/sample_c++/platform/linux/manifold2/CMakeFiles/d
 
 # fast build rule for target.
 dji_sdk_demo_linux_cxx/fast:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build
 .PHONY : dji_sdk_demo_linux_cxx/fast
 
 __/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_core.o: __/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_core.c.o
@@ -177,7 +177,7 @@ __/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_fi
 
 # target to build an object file
 __/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_core.c.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_core.c.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_core.c.o
 .PHONY : __/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_core.c.o
 
 __/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_core.i: __/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_core.c.i
@@ -186,7 +186,7 @@ __/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_fi
 
 # target to preprocess a source file
 __/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_core.c.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_core.c.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_core.c.i
 .PHONY : __/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_core.c.i
 
 __/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_core.s: __/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_core.c.s
@@ -195,7 +195,7 @@ __/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_fi
 
 # target to generate assembly for a file
 __/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_core.c.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_core.c.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_core.c.s
 .PHONY : __/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_core.c.s
 
 __/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_jpg.o: __/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_jpg.c.o
@@ -204,7 +204,7 @@ __/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_fi
 
 # target to build an object file
 __/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_jpg.c.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_jpg.c.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_jpg.c.o
 .PHONY : __/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_jpg.c.o
 
 __/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_jpg.i: __/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_jpg.c.i
@@ -213,7 +213,7 @@ __/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_fi
 
 # target to preprocess a source file
 __/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_jpg.c.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_jpg.c.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_jpg.c.i
 .PHONY : __/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_jpg.c.i
 
 __/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_jpg.s: __/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_jpg.c.s
@@ -222,7 +222,7 @@ __/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_fi
 
 # target to generate assembly for a file
 __/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_jpg.c.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_jpg.c.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_jpg.c.s
 .PHONY : __/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_jpg.c.s
 
 __/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_mp4.o: __/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_mp4.c.o
@@ -231,7 +231,7 @@ __/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_fi
 
 # target to build an object file
 __/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_mp4.c.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_mp4.c.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_mp4.c.o
 .PHONY : __/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_mp4.c.o
 
 __/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_mp4.i: __/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_mp4.c.i
@@ -240,7 +240,7 @@ __/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_fi
 
 # target to preprocess a source file
 __/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_mp4.c.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_mp4.c.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_mp4.c.i
 .PHONY : __/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_mp4.c.i
 
 __/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_mp4.s: __/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_mp4.c.s
@@ -249,7 +249,7 @@ __/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_fi
 
 # target to generate assembly for a file
 __/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_mp4.c.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_mp4.c.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_mp4.c.s
 .PHONY : __/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_mp4.c.s
 
 __/__/__/__/sample_c/module_sample/camera_emu/test_payload_cam_emu_base.o: __/__/__/__/sample_c/module_sample/camera_emu/test_payload_cam_emu_base.c.o
@@ -258,7 +258,7 @@ __/__/__/__/sample_c/module_sample/camera_emu/test_payload_cam_emu_base.o: __/__
 
 # target to build an object file
 __/__/__/__/sample_c/module_sample/camera_emu/test_payload_cam_emu_base.c.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/camera_emu/test_payload_cam_emu_base.c.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/camera_emu/test_payload_cam_emu_base.c.o
 .PHONY : __/__/__/__/sample_c/module_sample/camera_emu/test_payload_cam_emu_base.c.o
 
 __/__/__/__/sample_c/module_sample/camera_emu/test_payload_cam_emu_base.i: __/__/__/__/sample_c/module_sample/camera_emu/test_payload_cam_emu_base.c.i
@@ -267,7 +267,7 @@ __/__/__/__/sample_c/module_sample/camera_emu/test_payload_cam_emu_base.i: __/__
 
 # target to preprocess a source file
 __/__/__/__/sample_c/module_sample/camera_emu/test_payload_cam_emu_base.c.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/camera_emu/test_payload_cam_emu_base.c.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/camera_emu/test_payload_cam_emu_base.c.i
 .PHONY : __/__/__/__/sample_c/module_sample/camera_emu/test_payload_cam_emu_base.c.i
 
 __/__/__/__/sample_c/module_sample/camera_emu/test_payload_cam_emu_base.s: __/__/__/__/sample_c/module_sample/camera_emu/test_payload_cam_emu_base.c.s
@@ -276,7 +276,7 @@ __/__/__/__/sample_c/module_sample/camera_emu/test_payload_cam_emu_base.s: __/__
 
 # target to generate assembly for a file
 __/__/__/__/sample_c/module_sample/camera_emu/test_payload_cam_emu_base.c.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/camera_emu/test_payload_cam_emu_base.c.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/camera_emu/test_payload_cam_emu_base.c.s
 .PHONY : __/__/__/__/sample_c/module_sample/camera_emu/test_payload_cam_emu_base.c.s
 
 __/__/__/__/sample_c/module_sample/camera_emu/test_payload_cam_emu_media.o: __/__/__/__/sample_c/module_sample/camera_emu/test_payload_cam_emu_media.c.o
@@ -285,7 +285,7 @@ __/__/__/__/sample_c/module_sample/camera_emu/test_payload_cam_emu_media.o: __/_
 
 # target to build an object file
 __/__/__/__/sample_c/module_sample/camera_emu/test_payload_cam_emu_media.c.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/camera_emu/test_payload_cam_emu_media.c.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/camera_emu/test_payload_cam_emu_media.c.o
 .PHONY : __/__/__/__/sample_c/module_sample/camera_emu/test_payload_cam_emu_media.c.o
 
 __/__/__/__/sample_c/module_sample/camera_emu/test_payload_cam_emu_media.i: __/__/__/__/sample_c/module_sample/camera_emu/test_payload_cam_emu_media.c.i
@@ -294,7 +294,7 @@ __/__/__/__/sample_c/module_sample/camera_emu/test_payload_cam_emu_media.i: __/_
 
 # target to preprocess a source file
 __/__/__/__/sample_c/module_sample/camera_emu/test_payload_cam_emu_media.c.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/camera_emu/test_payload_cam_emu_media.c.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/camera_emu/test_payload_cam_emu_media.c.i
 .PHONY : __/__/__/__/sample_c/module_sample/camera_emu/test_payload_cam_emu_media.c.i
 
 __/__/__/__/sample_c/module_sample/camera_emu/test_payload_cam_emu_media.s: __/__/__/__/sample_c/module_sample/camera_emu/test_payload_cam_emu_media.c.s
@@ -303,7 +303,7 @@ __/__/__/__/sample_c/module_sample/camera_emu/test_payload_cam_emu_media.s: __/_
 
 # target to generate assembly for a file
 __/__/__/__/sample_c/module_sample/camera_emu/test_payload_cam_emu_media.c.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/camera_emu/test_payload_cam_emu_media.c.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/camera_emu/test_payload_cam_emu_media.c.s
 .PHONY : __/__/__/__/sample_c/module_sample/camera_emu/test_payload_cam_emu_media.c.s
 
 __/__/__/__/sample_c/module_sample/camera_manager/test_camera_manager.o: __/__/__/__/sample_c/module_sample/camera_manager/test_camera_manager.c.o
@@ -312,7 +312,7 @@ __/__/__/__/sample_c/module_sample/camera_manager/test_camera_manager.o: __/__/_
 
 # target to build an object file
 __/__/__/__/sample_c/module_sample/camera_manager/test_camera_manager.c.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/camera_manager/test_camera_manager.c.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/camera_manager/test_camera_manager.c.o
 .PHONY : __/__/__/__/sample_c/module_sample/camera_manager/test_camera_manager.c.o
 
 __/__/__/__/sample_c/module_sample/camera_manager/test_camera_manager.i: __/__/__/__/sample_c/module_sample/camera_manager/test_camera_manager.c.i
@@ -321,7 +321,7 @@ __/__/__/__/sample_c/module_sample/camera_manager/test_camera_manager.i: __/__/_
 
 # target to preprocess a source file
 __/__/__/__/sample_c/module_sample/camera_manager/test_camera_manager.c.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/camera_manager/test_camera_manager.c.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/camera_manager/test_camera_manager.c.i
 .PHONY : __/__/__/__/sample_c/module_sample/camera_manager/test_camera_manager.c.i
 
 __/__/__/__/sample_c/module_sample/camera_manager/test_camera_manager.s: __/__/__/__/sample_c/module_sample/camera_manager/test_camera_manager.c.s
@@ -330,7 +330,7 @@ __/__/__/__/sample_c/module_sample/camera_manager/test_camera_manager.s: __/__/_
 
 # target to generate assembly for a file
 __/__/__/__/sample_c/module_sample/camera_manager/test_camera_manager.c.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/camera_manager/test_camera_manager.c.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/camera_manager/test_camera_manager.c.s
 .PHONY : __/__/__/__/sample_c/module_sample/camera_manager/test_camera_manager.c.s
 
 __/__/__/__/sample_c/module_sample/data_transmission/test_data_transmission.o: __/__/__/__/sample_c/module_sample/data_transmission/test_data_transmission.c.o
@@ -339,7 +339,7 @@ __/__/__/__/sample_c/module_sample/data_transmission/test_data_transmission.o: _
 
 # target to build an object file
 __/__/__/__/sample_c/module_sample/data_transmission/test_data_transmission.c.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/data_transmission/test_data_transmission.c.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/data_transmission/test_data_transmission.c.o
 .PHONY : __/__/__/__/sample_c/module_sample/data_transmission/test_data_transmission.c.o
 
 __/__/__/__/sample_c/module_sample/data_transmission/test_data_transmission.i: __/__/__/__/sample_c/module_sample/data_transmission/test_data_transmission.c.i
@@ -348,7 +348,7 @@ __/__/__/__/sample_c/module_sample/data_transmission/test_data_transmission.i: _
 
 # target to preprocess a source file
 __/__/__/__/sample_c/module_sample/data_transmission/test_data_transmission.c.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/data_transmission/test_data_transmission.c.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/data_transmission/test_data_transmission.c.i
 .PHONY : __/__/__/__/sample_c/module_sample/data_transmission/test_data_transmission.c.i
 
 __/__/__/__/sample_c/module_sample/data_transmission/test_data_transmission.s: __/__/__/__/sample_c/module_sample/data_transmission/test_data_transmission.c.s
@@ -357,7 +357,7 @@ __/__/__/__/sample_c/module_sample/data_transmission/test_data_transmission.s: _
 
 # target to generate assembly for a file
 __/__/__/__/sample_c/module_sample/data_transmission/test_data_transmission.c.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/data_transmission/test_data_transmission.c.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/data_transmission/test_data_transmission.c.s
 .PHONY : __/__/__/__/sample_c/module_sample/data_transmission/test_data_transmission.c.s
 
 __/__/__/__/sample_c/module_sample/fc_subscription/test_fc_subscription.o: __/__/__/__/sample_c/module_sample/fc_subscription/test_fc_subscription.c.o
@@ -366,7 +366,7 @@ __/__/__/__/sample_c/module_sample/fc_subscription/test_fc_subscription.o: __/__
 
 # target to build an object file
 __/__/__/__/sample_c/module_sample/fc_subscription/test_fc_subscription.c.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/fc_subscription/test_fc_subscription.c.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/fc_subscription/test_fc_subscription.c.o
 .PHONY : __/__/__/__/sample_c/module_sample/fc_subscription/test_fc_subscription.c.o
 
 __/__/__/__/sample_c/module_sample/fc_subscription/test_fc_subscription.i: __/__/__/__/sample_c/module_sample/fc_subscription/test_fc_subscription.c.i
@@ -375,7 +375,7 @@ __/__/__/__/sample_c/module_sample/fc_subscription/test_fc_subscription.i: __/__
 
 # target to preprocess a source file
 __/__/__/__/sample_c/module_sample/fc_subscription/test_fc_subscription.c.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/fc_subscription/test_fc_subscription.c.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/fc_subscription/test_fc_subscription.c.i
 .PHONY : __/__/__/__/sample_c/module_sample/fc_subscription/test_fc_subscription.c.i
 
 __/__/__/__/sample_c/module_sample/fc_subscription/test_fc_subscription.s: __/__/__/__/sample_c/module_sample/fc_subscription/test_fc_subscription.c.s
@@ -384,7 +384,7 @@ __/__/__/__/sample_c/module_sample/fc_subscription/test_fc_subscription.s: __/__
 
 # target to generate assembly for a file
 __/__/__/__/sample_c/module_sample/fc_subscription/test_fc_subscription.c.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/fc_subscription/test_fc_subscription.c.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/fc_subscription/test_fc_subscription.c.s
 .PHONY : __/__/__/__/sample_c/module_sample/fc_subscription/test_fc_subscription.c.s
 
 __/__/__/__/sample_c/module_sample/flight_control/test_flight_control.o: __/__/__/__/sample_c/module_sample/flight_control/test_flight_control.c.o
@@ -393,7 +393,7 @@ __/__/__/__/sample_c/module_sample/flight_control/test_flight_control.o: __/__/_
 
 # target to build an object file
 __/__/__/__/sample_c/module_sample/flight_control/test_flight_control.c.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/flight_control/test_flight_control.c.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/flight_control/test_flight_control.c.o
 .PHONY : __/__/__/__/sample_c/module_sample/flight_control/test_flight_control.c.o
 
 __/__/__/__/sample_c/module_sample/flight_control/test_flight_control.i: __/__/__/__/sample_c/module_sample/flight_control/test_flight_control.c.i
@@ -402,7 +402,7 @@ __/__/__/__/sample_c/module_sample/flight_control/test_flight_control.i: __/__/_
 
 # target to preprocess a source file
 __/__/__/__/sample_c/module_sample/flight_control/test_flight_control.c.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/flight_control/test_flight_control.c.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/flight_control/test_flight_control.c.i
 .PHONY : __/__/__/__/sample_c/module_sample/flight_control/test_flight_control.c.i
 
 __/__/__/__/sample_c/module_sample/flight_control/test_flight_control.s: __/__/__/__/sample_c/module_sample/flight_control/test_flight_control.c.s
@@ -411,7 +411,7 @@ __/__/__/__/sample_c/module_sample/flight_control/test_flight_control.s: __/__/_
 
 # target to generate assembly for a file
 __/__/__/__/sample_c/module_sample/flight_control/test_flight_control.c.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/flight_control/test_flight_control.c.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/flight_control/test_flight_control.c.s
 .PHONY : __/__/__/__/sample_c/module_sample/flight_control/test_flight_control.c.s
 
 __/__/__/__/sample_c/module_sample/gimbal_emu/test_payload_gimbal_emu.o: __/__/__/__/sample_c/module_sample/gimbal_emu/test_payload_gimbal_emu.c.o
@@ -420,7 +420,7 @@ __/__/__/__/sample_c/module_sample/gimbal_emu/test_payload_gimbal_emu.o: __/__/_
 
 # target to build an object file
 __/__/__/__/sample_c/module_sample/gimbal_emu/test_payload_gimbal_emu.c.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/gimbal_emu/test_payload_gimbal_emu.c.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/gimbal_emu/test_payload_gimbal_emu.c.o
 .PHONY : __/__/__/__/sample_c/module_sample/gimbal_emu/test_payload_gimbal_emu.c.o
 
 __/__/__/__/sample_c/module_sample/gimbal_emu/test_payload_gimbal_emu.i: __/__/__/__/sample_c/module_sample/gimbal_emu/test_payload_gimbal_emu.c.i
@@ -429,7 +429,7 @@ __/__/__/__/sample_c/module_sample/gimbal_emu/test_payload_gimbal_emu.i: __/__/_
 
 # target to preprocess a source file
 __/__/__/__/sample_c/module_sample/gimbal_emu/test_payload_gimbal_emu.c.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/gimbal_emu/test_payload_gimbal_emu.c.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/gimbal_emu/test_payload_gimbal_emu.c.i
 .PHONY : __/__/__/__/sample_c/module_sample/gimbal_emu/test_payload_gimbal_emu.c.i
 
 __/__/__/__/sample_c/module_sample/gimbal_emu/test_payload_gimbal_emu.s: __/__/__/__/sample_c/module_sample/gimbal_emu/test_payload_gimbal_emu.c.s
@@ -438,7 +438,7 @@ __/__/__/__/sample_c/module_sample/gimbal_emu/test_payload_gimbal_emu.s: __/__/_
 
 # target to generate assembly for a file
 __/__/__/__/sample_c/module_sample/gimbal_emu/test_payload_gimbal_emu.c.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/gimbal_emu/test_payload_gimbal_emu.c.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/gimbal_emu/test_payload_gimbal_emu.c.s
 .PHONY : __/__/__/__/sample_c/module_sample/gimbal_emu/test_payload_gimbal_emu.c.s
 
 __/__/__/__/sample_c/module_sample/gimbal_manager/test_gimbal_manager.o: __/__/__/__/sample_c/module_sample/gimbal_manager/test_gimbal_manager.c.o
@@ -447,7 +447,7 @@ __/__/__/__/sample_c/module_sample/gimbal_manager/test_gimbal_manager.o: __/__/_
 
 # target to build an object file
 __/__/__/__/sample_c/module_sample/gimbal_manager/test_gimbal_manager.c.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/gimbal_manager/test_gimbal_manager.c.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/gimbal_manager/test_gimbal_manager.c.o
 .PHONY : __/__/__/__/sample_c/module_sample/gimbal_manager/test_gimbal_manager.c.o
 
 __/__/__/__/sample_c/module_sample/gimbal_manager/test_gimbal_manager.i: __/__/__/__/sample_c/module_sample/gimbal_manager/test_gimbal_manager.c.i
@@ -456,7 +456,7 @@ __/__/__/__/sample_c/module_sample/gimbal_manager/test_gimbal_manager.i: __/__/_
 
 # target to preprocess a source file
 __/__/__/__/sample_c/module_sample/gimbal_manager/test_gimbal_manager.c.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/gimbal_manager/test_gimbal_manager.c.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/gimbal_manager/test_gimbal_manager.c.i
 .PHONY : __/__/__/__/sample_c/module_sample/gimbal_manager/test_gimbal_manager.c.i
 
 __/__/__/__/sample_c/module_sample/gimbal_manager/test_gimbal_manager.s: __/__/__/__/sample_c/module_sample/gimbal_manager/test_gimbal_manager.c.s
@@ -465,7 +465,7 @@ __/__/__/__/sample_c/module_sample/gimbal_manager/test_gimbal_manager.s: __/__/_
 
 # target to generate assembly for a file
 __/__/__/__/sample_c/module_sample/gimbal_manager/test_gimbal_manager.c.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/gimbal_manager/test_gimbal_manager.c.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/gimbal_manager/test_gimbal_manager.c.s
 .PHONY : __/__/__/__/sample_c/module_sample/gimbal_manager/test_gimbal_manager.c.s
 
 __/__/__/__/sample_c/module_sample/hms/test_hms.o: __/__/__/__/sample_c/module_sample/hms/test_hms.c.o
@@ -474,7 +474,7 @@ __/__/__/__/sample_c/module_sample/hms/test_hms.o: __/__/__/__/sample_c/module_s
 
 # target to build an object file
 __/__/__/__/sample_c/module_sample/hms/test_hms.c.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/hms/test_hms.c.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/hms/test_hms.c.o
 .PHONY : __/__/__/__/sample_c/module_sample/hms/test_hms.c.o
 
 __/__/__/__/sample_c/module_sample/hms/test_hms.i: __/__/__/__/sample_c/module_sample/hms/test_hms.c.i
@@ -483,7 +483,7 @@ __/__/__/__/sample_c/module_sample/hms/test_hms.i: __/__/__/__/sample_c/module_s
 
 # target to preprocess a source file
 __/__/__/__/sample_c/module_sample/hms/test_hms.c.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/hms/test_hms.c.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/hms/test_hms.c.i
 .PHONY : __/__/__/__/sample_c/module_sample/hms/test_hms.c.i
 
 __/__/__/__/sample_c/module_sample/hms/test_hms.s: __/__/__/__/sample_c/module_sample/hms/test_hms.c.s
@@ -492,7 +492,7 @@ __/__/__/__/sample_c/module_sample/hms/test_hms.s: __/__/__/__/sample_c/module_s
 
 # target to generate assembly for a file
 __/__/__/__/sample_c/module_sample/hms/test_hms.c.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/hms/test_hms.c.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/hms/test_hms.c.s
 .PHONY : __/__/__/__/sample_c/module_sample/hms/test_hms.c.s
 
 __/__/__/__/sample_c/module_sample/interest_point/test_interest_point.o: __/__/__/__/sample_c/module_sample/interest_point/test_interest_point.c.o
@@ -501,7 +501,7 @@ __/__/__/__/sample_c/module_sample/interest_point/test_interest_point.o: __/__/_
 
 # target to build an object file
 __/__/__/__/sample_c/module_sample/interest_point/test_interest_point.c.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/interest_point/test_interest_point.c.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/interest_point/test_interest_point.c.o
 .PHONY : __/__/__/__/sample_c/module_sample/interest_point/test_interest_point.c.o
 
 __/__/__/__/sample_c/module_sample/interest_point/test_interest_point.i: __/__/__/__/sample_c/module_sample/interest_point/test_interest_point.c.i
@@ -510,7 +510,7 @@ __/__/__/__/sample_c/module_sample/interest_point/test_interest_point.i: __/__/_
 
 # target to preprocess a source file
 __/__/__/__/sample_c/module_sample/interest_point/test_interest_point.c.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/interest_point/test_interest_point.c.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/interest_point/test_interest_point.c.i
 .PHONY : __/__/__/__/sample_c/module_sample/interest_point/test_interest_point.c.i
 
 __/__/__/__/sample_c/module_sample/interest_point/test_interest_point.s: __/__/__/__/sample_c/module_sample/interest_point/test_interest_point.c.s
@@ -519,7 +519,7 @@ __/__/__/__/sample_c/module_sample/interest_point/test_interest_point.s: __/__/_
 
 # target to generate assembly for a file
 __/__/__/__/sample_c/module_sample/interest_point/test_interest_point.c.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/interest_point/test_interest_point.c.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/interest_point/test_interest_point.c.s
 .PHONY : __/__/__/__/sample_c/module_sample/interest_point/test_interest_point.c.s
 
 __/__/__/__/sample_c/module_sample/liveview/test_liveview.o: __/__/__/__/sample_c/module_sample/liveview/test_liveview.c.o
@@ -528,7 +528,7 @@ __/__/__/__/sample_c/module_sample/liveview/test_liveview.o: __/__/__/__/sample_
 
 # target to build an object file
 __/__/__/__/sample_c/module_sample/liveview/test_liveview.c.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/liveview/test_liveview.c.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/liveview/test_liveview.c.o
 .PHONY : __/__/__/__/sample_c/module_sample/liveview/test_liveview.c.o
 
 __/__/__/__/sample_c/module_sample/liveview/test_liveview.i: __/__/__/__/sample_c/module_sample/liveview/test_liveview.c.i
@@ -537,7 +537,7 @@ __/__/__/__/sample_c/module_sample/liveview/test_liveview.i: __/__/__/__/sample_
 
 # target to preprocess a source file
 __/__/__/__/sample_c/module_sample/liveview/test_liveview.c.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/liveview/test_liveview.c.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/liveview/test_liveview.c.i
 .PHONY : __/__/__/__/sample_c/module_sample/liveview/test_liveview.c.i
 
 __/__/__/__/sample_c/module_sample/liveview/test_liveview.s: __/__/__/__/sample_c/module_sample/liveview/test_liveview.c.s
@@ -546,7 +546,7 @@ __/__/__/__/sample_c/module_sample/liveview/test_liveview.s: __/__/__/__/sample_
 
 # target to generate assembly for a file
 __/__/__/__/sample_c/module_sample/liveview/test_liveview.c.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/liveview/test_liveview.c.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/liveview/test_liveview.c.s
 .PHONY : __/__/__/__/sample_c/module_sample/liveview/test_liveview.c.s
 
 __/__/__/__/sample_c/module_sample/mop_channel/tempCodeRunnerFile.o: __/__/__/__/sample_c/module_sample/mop_channel/tempCodeRunnerFile.c.o
@@ -555,7 +555,7 @@ __/__/__/__/sample_c/module_sample/mop_channel/tempCodeRunnerFile.o: __/__/__/__
 
 # target to build an object file
 __/__/__/__/sample_c/module_sample/mop_channel/tempCodeRunnerFile.c.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/mop_channel/tempCodeRunnerFile.c.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/mop_channel/tempCodeRunnerFile.c.o
 .PHONY : __/__/__/__/sample_c/module_sample/mop_channel/tempCodeRunnerFile.c.o
 
 __/__/__/__/sample_c/module_sample/mop_channel/tempCodeRunnerFile.i: __/__/__/__/sample_c/module_sample/mop_channel/tempCodeRunnerFile.c.i
@@ -564,7 +564,7 @@ __/__/__/__/sample_c/module_sample/mop_channel/tempCodeRunnerFile.i: __/__/__/__
 
 # target to preprocess a source file
 __/__/__/__/sample_c/module_sample/mop_channel/tempCodeRunnerFile.c.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/mop_channel/tempCodeRunnerFile.c.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/mop_channel/tempCodeRunnerFile.c.i
 .PHONY : __/__/__/__/sample_c/module_sample/mop_channel/tempCodeRunnerFile.c.i
 
 __/__/__/__/sample_c/module_sample/mop_channel/tempCodeRunnerFile.s: __/__/__/__/sample_c/module_sample/mop_channel/tempCodeRunnerFile.c.s
@@ -573,7 +573,7 @@ __/__/__/__/sample_c/module_sample/mop_channel/tempCodeRunnerFile.s: __/__/__/__
 
 # target to generate assembly for a file
 __/__/__/__/sample_c/module_sample/mop_channel/tempCodeRunnerFile.c.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/mop_channel/tempCodeRunnerFile.c.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/mop_channel/tempCodeRunnerFile.c.s
 .PHONY : __/__/__/__/sample_c/module_sample/mop_channel/tempCodeRunnerFile.c.s
 
 __/__/__/__/sample_c/module_sample/mop_channel/test_mop_channel.o: __/__/__/__/sample_c/module_sample/mop_channel/test_mop_channel.c.o
@@ -582,7 +582,7 @@ __/__/__/__/sample_c/module_sample/mop_channel/test_mop_channel.o: __/__/__/__/s
 
 # target to build an object file
 __/__/__/__/sample_c/module_sample/mop_channel/test_mop_channel.c.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/mop_channel/test_mop_channel.c.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/mop_channel/test_mop_channel.c.o
 .PHONY : __/__/__/__/sample_c/module_sample/mop_channel/test_mop_channel.c.o
 
 __/__/__/__/sample_c/module_sample/mop_channel/test_mop_channel.i: __/__/__/__/sample_c/module_sample/mop_channel/test_mop_channel.c.i
@@ -591,7 +591,7 @@ __/__/__/__/sample_c/module_sample/mop_channel/test_mop_channel.i: __/__/__/__/s
 
 # target to preprocess a source file
 __/__/__/__/sample_c/module_sample/mop_channel/test_mop_channel.c.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/mop_channel/test_mop_channel.c.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/mop_channel/test_mop_channel.c.i
 .PHONY : __/__/__/__/sample_c/module_sample/mop_channel/test_mop_channel.c.i
 
 __/__/__/__/sample_c/module_sample/mop_channel/test_mop_channel.s: __/__/__/__/sample_c/module_sample/mop_channel/test_mop_channel.c.s
@@ -600,7 +600,7 @@ __/__/__/__/sample_c/module_sample/mop_channel/test_mop_channel.s: __/__/__/__/s
 
 # target to generate assembly for a file
 __/__/__/__/sample_c/module_sample/mop_channel/test_mop_channel.c.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/mop_channel/test_mop_channel.c.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/mop_channel/test_mop_channel.c.s
 .PHONY : __/__/__/__/sample_c/module_sample/mop_channel/test_mop_channel.c.s
 
 __/__/__/__/sample_c/module_sample/payload_collaboration/test_payload_collaboration.o: __/__/__/__/sample_c/module_sample/payload_collaboration/test_payload_collaboration.c.o
@@ -609,7 +609,7 @@ __/__/__/__/sample_c/module_sample/payload_collaboration/test_payload_collaborat
 
 # target to build an object file
 __/__/__/__/sample_c/module_sample/payload_collaboration/test_payload_collaboration.c.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/payload_collaboration/test_payload_collaboration.c.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/payload_collaboration/test_payload_collaboration.c.o
 .PHONY : __/__/__/__/sample_c/module_sample/payload_collaboration/test_payload_collaboration.c.o
 
 __/__/__/__/sample_c/module_sample/payload_collaboration/test_payload_collaboration.i: __/__/__/__/sample_c/module_sample/payload_collaboration/test_payload_collaboration.c.i
@@ -618,7 +618,7 @@ __/__/__/__/sample_c/module_sample/payload_collaboration/test_payload_collaborat
 
 # target to preprocess a source file
 __/__/__/__/sample_c/module_sample/payload_collaboration/test_payload_collaboration.c.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/payload_collaboration/test_payload_collaboration.c.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/payload_collaboration/test_payload_collaboration.c.i
 .PHONY : __/__/__/__/sample_c/module_sample/payload_collaboration/test_payload_collaboration.c.i
 
 __/__/__/__/sample_c/module_sample/payload_collaboration/test_payload_collaboration.s: __/__/__/__/sample_c/module_sample/payload_collaboration/test_payload_collaboration.c.s
@@ -627,7 +627,7 @@ __/__/__/__/sample_c/module_sample/payload_collaboration/test_payload_collaborat
 
 # target to generate assembly for a file
 __/__/__/__/sample_c/module_sample/payload_collaboration/test_payload_collaboration.c.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/payload_collaboration/test_payload_collaboration.c.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/payload_collaboration/test_payload_collaboration.c.s
 .PHONY : __/__/__/__/sample_c/module_sample/payload_collaboration/test_payload_collaboration.c.s
 
 __/__/__/__/sample_c/module_sample/perception/test_perception.o: __/__/__/__/sample_c/module_sample/perception/test_perception.c.o
@@ -636,7 +636,7 @@ __/__/__/__/sample_c/module_sample/perception/test_perception.o: __/__/__/__/sam
 
 # target to build an object file
 __/__/__/__/sample_c/module_sample/perception/test_perception.c.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/perception/test_perception.c.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/perception/test_perception.c.o
 .PHONY : __/__/__/__/sample_c/module_sample/perception/test_perception.c.o
 
 __/__/__/__/sample_c/module_sample/perception/test_perception.i: __/__/__/__/sample_c/module_sample/perception/test_perception.c.i
@@ -645,7 +645,7 @@ __/__/__/__/sample_c/module_sample/perception/test_perception.i: __/__/__/__/sam
 
 # target to preprocess a source file
 __/__/__/__/sample_c/module_sample/perception/test_perception.c.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/perception/test_perception.c.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/perception/test_perception.c.i
 .PHONY : __/__/__/__/sample_c/module_sample/perception/test_perception.c.i
 
 __/__/__/__/sample_c/module_sample/perception/test_perception.s: __/__/__/__/sample_c/module_sample/perception/test_perception.c.s
@@ -654,7 +654,7 @@ __/__/__/__/sample_c/module_sample/perception/test_perception.s: __/__/__/__/sam
 
 # target to generate assembly for a file
 __/__/__/__/sample_c/module_sample/perception/test_perception.c.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/perception/test_perception.c.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/perception/test_perception.c.s
 .PHONY : __/__/__/__/sample_c/module_sample/perception/test_perception.c.s
 
 __/__/__/__/sample_c/module_sample/positioning/test_positioning.o: __/__/__/__/sample_c/module_sample/positioning/test_positioning.c.o
@@ -663,7 +663,7 @@ __/__/__/__/sample_c/module_sample/positioning/test_positioning.o: __/__/__/__/s
 
 # target to build an object file
 __/__/__/__/sample_c/module_sample/positioning/test_positioning.c.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/positioning/test_positioning.c.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/positioning/test_positioning.c.o
 .PHONY : __/__/__/__/sample_c/module_sample/positioning/test_positioning.c.o
 
 __/__/__/__/sample_c/module_sample/positioning/test_positioning.i: __/__/__/__/sample_c/module_sample/positioning/test_positioning.c.i
@@ -672,7 +672,7 @@ __/__/__/__/sample_c/module_sample/positioning/test_positioning.i: __/__/__/__/s
 
 # target to preprocess a source file
 __/__/__/__/sample_c/module_sample/positioning/test_positioning.c.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/positioning/test_positioning.c.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/positioning/test_positioning.c.i
 .PHONY : __/__/__/__/sample_c/module_sample/positioning/test_positioning.c.i
 
 __/__/__/__/sample_c/module_sample/positioning/test_positioning.s: __/__/__/__/sample_c/module_sample/positioning/test_positioning.c.s
@@ -681,7 +681,7 @@ __/__/__/__/sample_c/module_sample/positioning/test_positioning.s: __/__/__/__/s
 
 # target to generate assembly for a file
 __/__/__/__/sample_c/module_sample/positioning/test_positioning.c.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/positioning/test_positioning.c.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/positioning/test_positioning.c.s
 .PHONY : __/__/__/__/sample_c/module_sample/positioning/test_positioning.c.s
 
 __/__/__/__/sample_c/module_sample/power_management/test_power_management.o: __/__/__/__/sample_c/module_sample/power_management/test_power_management.c.o
@@ -690,7 +690,7 @@ __/__/__/__/sample_c/module_sample/power_management/test_power_management.o: __/
 
 # target to build an object file
 __/__/__/__/sample_c/module_sample/power_management/test_power_management.c.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/power_management/test_power_management.c.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/power_management/test_power_management.c.o
 .PHONY : __/__/__/__/sample_c/module_sample/power_management/test_power_management.c.o
 
 __/__/__/__/sample_c/module_sample/power_management/test_power_management.i: __/__/__/__/sample_c/module_sample/power_management/test_power_management.c.i
@@ -699,7 +699,7 @@ __/__/__/__/sample_c/module_sample/power_management/test_power_management.i: __/
 
 # target to preprocess a source file
 __/__/__/__/sample_c/module_sample/power_management/test_power_management.c.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/power_management/test_power_management.c.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/power_management/test_power_management.c.i
 .PHONY : __/__/__/__/sample_c/module_sample/power_management/test_power_management.c.i
 
 __/__/__/__/sample_c/module_sample/power_management/test_power_management.s: __/__/__/__/sample_c/module_sample/power_management/test_power_management.c.s
@@ -708,7 +708,7 @@ __/__/__/__/sample_c/module_sample/power_management/test_power_management.s: __/
 
 # target to generate assembly for a file
 __/__/__/__/sample_c/module_sample/power_management/test_power_management.c.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/power_management/test_power_management.c.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/power_management/test_power_management.c.s
 .PHONY : __/__/__/__/sample_c/module_sample/power_management/test_power_management.c.s
 
 __/__/__/__/sample_c/module_sample/time_sync/test_time_sync.o: __/__/__/__/sample_c/module_sample/time_sync/test_time_sync.c.o
@@ -717,7 +717,7 @@ __/__/__/__/sample_c/module_sample/time_sync/test_time_sync.o: __/__/__/__/sampl
 
 # target to build an object file
 __/__/__/__/sample_c/module_sample/time_sync/test_time_sync.c.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/time_sync/test_time_sync.c.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/time_sync/test_time_sync.c.o
 .PHONY : __/__/__/__/sample_c/module_sample/time_sync/test_time_sync.c.o
 
 __/__/__/__/sample_c/module_sample/time_sync/test_time_sync.i: __/__/__/__/sample_c/module_sample/time_sync/test_time_sync.c.i
@@ -726,7 +726,7 @@ __/__/__/__/sample_c/module_sample/time_sync/test_time_sync.i: __/__/__/__/sampl
 
 # target to preprocess a source file
 __/__/__/__/sample_c/module_sample/time_sync/test_time_sync.c.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/time_sync/test_time_sync.c.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/time_sync/test_time_sync.c.i
 .PHONY : __/__/__/__/sample_c/module_sample/time_sync/test_time_sync.c.i
 
 __/__/__/__/sample_c/module_sample/time_sync/test_time_sync.s: __/__/__/__/sample_c/module_sample/time_sync/test_time_sync.c.s
@@ -735,7 +735,7 @@ __/__/__/__/sample_c/module_sample/time_sync/test_time_sync.s: __/__/__/__/sampl
 
 # target to generate assembly for a file
 __/__/__/__/sample_c/module_sample/time_sync/test_time_sync.c.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/time_sync/test_time_sync.c.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/time_sync/test_time_sync.c.s
 .PHONY : __/__/__/__/sample_c/module_sample/time_sync/test_time_sync.c.s
 
 __/__/__/__/sample_c/module_sample/upgrade/test_upgrade.o: __/__/__/__/sample_c/module_sample/upgrade/test_upgrade.c.o
@@ -744,7 +744,7 @@ __/__/__/__/sample_c/module_sample/upgrade/test_upgrade.o: __/__/__/__/sample_c/
 
 # target to build an object file
 __/__/__/__/sample_c/module_sample/upgrade/test_upgrade.c.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/upgrade/test_upgrade.c.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/upgrade/test_upgrade.c.o
 .PHONY : __/__/__/__/sample_c/module_sample/upgrade/test_upgrade.c.o
 
 __/__/__/__/sample_c/module_sample/upgrade/test_upgrade.i: __/__/__/__/sample_c/module_sample/upgrade/test_upgrade.c.i
@@ -753,7 +753,7 @@ __/__/__/__/sample_c/module_sample/upgrade/test_upgrade.i: __/__/__/__/sample_c/
 
 # target to preprocess a source file
 __/__/__/__/sample_c/module_sample/upgrade/test_upgrade.c.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/upgrade/test_upgrade.c.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/upgrade/test_upgrade.c.i
 .PHONY : __/__/__/__/sample_c/module_sample/upgrade/test_upgrade.c.i
 
 __/__/__/__/sample_c/module_sample/upgrade/test_upgrade.s: __/__/__/__/sample_c/module_sample/upgrade/test_upgrade.c.s
@@ -762,7 +762,7 @@ __/__/__/__/sample_c/module_sample/upgrade/test_upgrade.s: __/__/__/__/sample_c/
 
 # target to generate assembly for a file
 __/__/__/__/sample_c/module_sample/upgrade/test_upgrade.c.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/upgrade/test_upgrade.c.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/upgrade/test_upgrade.c.s
 .PHONY : __/__/__/__/sample_c/module_sample/upgrade/test_upgrade.c.s
 
 __/__/__/__/sample_c/module_sample/upgrade/test_upgrade_common_file_transfer.o: __/__/__/__/sample_c/module_sample/upgrade/test_upgrade_common_file_transfer.c.o
@@ -771,7 +771,7 @@ __/__/__/__/sample_c/module_sample/upgrade/test_upgrade_common_file_transfer.o: 
 
 # target to build an object file
 __/__/__/__/sample_c/module_sample/upgrade/test_upgrade_common_file_transfer.c.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/upgrade/test_upgrade_common_file_transfer.c.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/upgrade/test_upgrade_common_file_transfer.c.o
 .PHONY : __/__/__/__/sample_c/module_sample/upgrade/test_upgrade_common_file_transfer.c.o
 
 __/__/__/__/sample_c/module_sample/upgrade/test_upgrade_common_file_transfer.i: __/__/__/__/sample_c/module_sample/upgrade/test_upgrade_common_file_transfer.c.i
@@ -780,7 +780,7 @@ __/__/__/__/sample_c/module_sample/upgrade/test_upgrade_common_file_transfer.i: 
 
 # target to preprocess a source file
 __/__/__/__/sample_c/module_sample/upgrade/test_upgrade_common_file_transfer.c.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/upgrade/test_upgrade_common_file_transfer.c.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/upgrade/test_upgrade_common_file_transfer.c.i
 .PHONY : __/__/__/__/sample_c/module_sample/upgrade/test_upgrade_common_file_transfer.c.i
 
 __/__/__/__/sample_c/module_sample/upgrade/test_upgrade_common_file_transfer.s: __/__/__/__/sample_c/module_sample/upgrade/test_upgrade_common_file_transfer.c.s
@@ -789,7 +789,7 @@ __/__/__/__/sample_c/module_sample/upgrade/test_upgrade_common_file_transfer.s: 
 
 # target to generate assembly for a file
 __/__/__/__/sample_c/module_sample/upgrade/test_upgrade_common_file_transfer.c.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/upgrade/test_upgrade_common_file_transfer.c.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/upgrade/test_upgrade_common_file_transfer.c.s
 .PHONY : __/__/__/__/sample_c/module_sample/upgrade/test_upgrade_common_file_transfer.c.s
 
 __/__/__/__/sample_c/module_sample/upgrade/test_upgrade_platform_opt.o: __/__/__/__/sample_c/module_sample/upgrade/test_upgrade_platform_opt.c.o
@@ -798,7 +798,7 @@ __/__/__/__/sample_c/module_sample/upgrade/test_upgrade_platform_opt.o: __/__/__
 
 # target to build an object file
 __/__/__/__/sample_c/module_sample/upgrade/test_upgrade_platform_opt.c.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/upgrade/test_upgrade_platform_opt.c.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/upgrade/test_upgrade_platform_opt.c.o
 .PHONY : __/__/__/__/sample_c/module_sample/upgrade/test_upgrade_platform_opt.c.o
 
 __/__/__/__/sample_c/module_sample/upgrade/test_upgrade_platform_opt.i: __/__/__/__/sample_c/module_sample/upgrade/test_upgrade_platform_opt.c.i
@@ -807,7 +807,7 @@ __/__/__/__/sample_c/module_sample/upgrade/test_upgrade_platform_opt.i: __/__/__
 
 # target to preprocess a source file
 __/__/__/__/sample_c/module_sample/upgrade/test_upgrade_platform_opt.c.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/upgrade/test_upgrade_platform_opt.c.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/upgrade/test_upgrade_platform_opt.c.i
 .PHONY : __/__/__/__/sample_c/module_sample/upgrade/test_upgrade_platform_opt.c.i
 
 __/__/__/__/sample_c/module_sample/upgrade/test_upgrade_platform_opt.s: __/__/__/__/sample_c/module_sample/upgrade/test_upgrade_platform_opt.c.s
@@ -816,7 +816,7 @@ __/__/__/__/sample_c/module_sample/upgrade/test_upgrade_platform_opt.s: __/__/__
 
 # target to generate assembly for a file
 __/__/__/__/sample_c/module_sample/upgrade/test_upgrade_platform_opt.c.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/upgrade/test_upgrade_platform_opt.c.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/upgrade/test_upgrade_platform_opt.c.s
 .PHONY : __/__/__/__/sample_c/module_sample/upgrade/test_upgrade_platform_opt.c.s
 
 __/__/__/__/sample_c/module_sample/utils/cJSON.o: __/__/__/__/sample_c/module_sample/utils/cJSON.c.o
@@ -825,7 +825,7 @@ __/__/__/__/sample_c/module_sample/utils/cJSON.o: __/__/__/__/sample_c/module_sa
 
 # target to build an object file
 __/__/__/__/sample_c/module_sample/utils/cJSON.c.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/cJSON.c.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/cJSON.c.o
 .PHONY : __/__/__/__/sample_c/module_sample/utils/cJSON.c.o
 
 __/__/__/__/sample_c/module_sample/utils/cJSON.i: __/__/__/__/sample_c/module_sample/utils/cJSON.c.i
@@ -834,7 +834,7 @@ __/__/__/__/sample_c/module_sample/utils/cJSON.i: __/__/__/__/sample_c/module_sa
 
 # target to preprocess a source file
 __/__/__/__/sample_c/module_sample/utils/cJSON.c.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/cJSON.c.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/cJSON.c.i
 .PHONY : __/__/__/__/sample_c/module_sample/utils/cJSON.c.i
 
 __/__/__/__/sample_c/module_sample/utils/cJSON.s: __/__/__/__/sample_c/module_sample/utils/cJSON.c.s
@@ -843,7 +843,7 @@ __/__/__/__/sample_c/module_sample/utils/cJSON.s: __/__/__/__/sample_c/module_sa
 
 # target to generate assembly for a file
 __/__/__/__/sample_c/module_sample/utils/cJSON.c.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/cJSON.c.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/cJSON.c.s
 .PHONY : __/__/__/__/sample_c/module_sample/utils/cJSON.c.s
 
 __/__/__/__/sample_c/module_sample/utils/dji_config_manager.o: __/__/__/__/sample_c/module_sample/utils/dji_config_manager.c.o
@@ -852,7 +852,7 @@ __/__/__/__/sample_c/module_sample/utils/dji_config_manager.o: __/__/__/__/sampl
 
 # target to build an object file
 __/__/__/__/sample_c/module_sample/utils/dji_config_manager.c.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/dji_config_manager.c.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/dji_config_manager.c.o
 .PHONY : __/__/__/__/sample_c/module_sample/utils/dji_config_manager.c.o
 
 __/__/__/__/sample_c/module_sample/utils/dji_config_manager.i: __/__/__/__/sample_c/module_sample/utils/dji_config_manager.c.i
@@ -861,7 +861,7 @@ __/__/__/__/sample_c/module_sample/utils/dji_config_manager.i: __/__/__/__/sampl
 
 # target to preprocess a source file
 __/__/__/__/sample_c/module_sample/utils/dji_config_manager.c.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/dji_config_manager.c.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/dji_config_manager.c.i
 .PHONY : __/__/__/__/sample_c/module_sample/utils/dji_config_manager.c.i
 
 __/__/__/__/sample_c/module_sample/utils/dji_config_manager.s: __/__/__/__/sample_c/module_sample/utils/dji_config_manager.c.s
@@ -870,7 +870,7 @@ __/__/__/__/sample_c/module_sample/utils/dji_config_manager.s: __/__/__/__/sampl
 
 # target to generate assembly for a file
 __/__/__/__/sample_c/module_sample/utils/dji_config_manager.c.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/dji_config_manager.c.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/dji_config_manager.c.s
 .PHONY : __/__/__/__/sample_c/module_sample/utils/dji_config_manager.c.s
 
 __/__/__/__/sample_c/module_sample/utils/util_buffer.o: __/__/__/__/sample_c/module_sample/utils/util_buffer.c.o
@@ -879,7 +879,7 @@ __/__/__/__/sample_c/module_sample/utils/util_buffer.o: __/__/__/__/sample_c/mod
 
 # target to build an object file
 __/__/__/__/sample_c/module_sample/utils/util_buffer.c.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/util_buffer.c.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/util_buffer.c.o
 .PHONY : __/__/__/__/sample_c/module_sample/utils/util_buffer.c.o
 
 __/__/__/__/sample_c/module_sample/utils/util_buffer.i: __/__/__/__/sample_c/module_sample/utils/util_buffer.c.i
@@ -888,7 +888,7 @@ __/__/__/__/sample_c/module_sample/utils/util_buffer.i: __/__/__/__/sample_c/mod
 
 # target to preprocess a source file
 __/__/__/__/sample_c/module_sample/utils/util_buffer.c.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/util_buffer.c.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/util_buffer.c.i
 .PHONY : __/__/__/__/sample_c/module_sample/utils/util_buffer.c.i
 
 __/__/__/__/sample_c/module_sample/utils/util_buffer.s: __/__/__/__/sample_c/module_sample/utils/util_buffer.c.s
@@ -897,7 +897,7 @@ __/__/__/__/sample_c/module_sample/utils/util_buffer.s: __/__/__/__/sample_c/mod
 
 # target to generate assembly for a file
 __/__/__/__/sample_c/module_sample/utils/util_buffer.c.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/util_buffer.c.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/util_buffer.c.s
 .PHONY : __/__/__/__/sample_c/module_sample/utils/util_buffer.c.s
 
 __/__/__/__/sample_c/module_sample/utils/util_file.o: __/__/__/__/sample_c/module_sample/utils/util_file.c.o
@@ -906,7 +906,7 @@ __/__/__/__/sample_c/module_sample/utils/util_file.o: __/__/__/__/sample_c/modul
 
 # target to build an object file
 __/__/__/__/sample_c/module_sample/utils/util_file.c.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/util_file.c.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/util_file.c.o
 .PHONY : __/__/__/__/sample_c/module_sample/utils/util_file.c.o
 
 __/__/__/__/sample_c/module_sample/utils/util_file.i: __/__/__/__/sample_c/module_sample/utils/util_file.c.i
@@ -915,7 +915,7 @@ __/__/__/__/sample_c/module_sample/utils/util_file.i: __/__/__/__/sample_c/modul
 
 # target to preprocess a source file
 __/__/__/__/sample_c/module_sample/utils/util_file.c.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/util_file.c.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/util_file.c.i
 .PHONY : __/__/__/__/sample_c/module_sample/utils/util_file.c.i
 
 __/__/__/__/sample_c/module_sample/utils/util_file.s: __/__/__/__/sample_c/module_sample/utils/util_file.c.s
@@ -924,7 +924,7 @@ __/__/__/__/sample_c/module_sample/utils/util_file.s: __/__/__/__/sample_c/modul
 
 # target to generate assembly for a file
 __/__/__/__/sample_c/module_sample/utils/util_file.c.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/util_file.c.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/util_file.c.s
 .PHONY : __/__/__/__/sample_c/module_sample/utils/util_file.c.s
 
 __/__/__/__/sample_c/module_sample/utils/util_link_list.o: __/__/__/__/sample_c/module_sample/utils/util_link_list.c.o
@@ -933,7 +933,7 @@ __/__/__/__/sample_c/module_sample/utils/util_link_list.o: __/__/__/__/sample_c/
 
 # target to build an object file
 __/__/__/__/sample_c/module_sample/utils/util_link_list.c.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/util_link_list.c.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/util_link_list.c.o
 .PHONY : __/__/__/__/sample_c/module_sample/utils/util_link_list.c.o
 
 __/__/__/__/sample_c/module_sample/utils/util_link_list.i: __/__/__/__/sample_c/module_sample/utils/util_link_list.c.i
@@ -942,7 +942,7 @@ __/__/__/__/sample_c/module_sample/utils/util_link_list.i: __/__/__/__/sample_c/
 
 # target to preprocess a source file
 __/__/__/__/sample_c/module_sample/utils/util_link_list.c.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/util_link_list.c.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/util_link_list.c.i
 .PHONY : __/__/__/__/sample_c/module_sample/utils/util_link_list.c.i
 
 __/__/__/__/sample_c/module_sample/utils/util_link_list.s: __/__/__/__/sample_c/module_sample/utils/util_link_list.c.s
@@ -951,7 +951,7 @@ __/__/__/__/sample_c/module_sample/utils/util_link_list.s: __/__/__/__/sample_c/
 
 # target to generate assembly for a file
 __/__/__/__/sample_c/module_sample/utils/util_link_list.c.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/util_link_list.c.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/util_link_list.c.s
 .PHONY : __/__/__/__/sample_c/module_sample/utils/util_link_list.c.s
 
 __/__/__/__/sample_c/module_sample/utils/util_md5.o: __/__/__/__/sample_c/module_sample/utils/util_md5.c.o
@@ -960,7 +960,7 @@ __/__/__/__/sample_c/module_sample/utils/util_md5.o: __/__/__/__/sample_c/module
 
 # target to build an object file
 __/__/__/__/sample_c/module_sample/utils/util_md5.c.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/util_md5.c.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/util_md5.c.o
 .PHONY : __/__/__/__/sample_c/module_sample/utils/util_md5.c.o
 
 __/__/__/__/sample_c/module_sample/utils/util_md5.i: __/__/__/__/sample_c/module_sample/utils/util_md5.c.i
@@ -969,7 +969,7 @@ __/__/__/__/sample_c/module_sample/utils/util_md5.i: __/__/__/__/sample_c/module
 
 # target to preprocess a source file
 __/__/__/__/sample_c/module_sample/utils/util_md5.c.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/util_md5.c.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/util_md5.c.i
 .PHONY : __/__/__/__/sample_c/module_sample/utils/util_md5.c.i
 
 __/__/__/__/sample_c/module_sample/utils/util_md5.s: __/__/__/__/sample_c/module_sample/utils/util_md5.c.s
@@ -978,7 +978,7 @@ __/__/__/__/sample_c/module_sample/utils/util_md5.s: __/__/__/__/sample_c/module
 
 # target to generate assembly for a file
 __/__/__/__/sample_c/module_sample/utils/util_md5.c.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/util_md5.c.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/util_md5.c.s
 .PHONY : __/__/__/__/sample_c/module_sample/utils/util_md5.c.s
 
 __/__/__/__/sample_c/module_sample/utils/util_misc.o: __/__/__/__/sample_c/module_sample/utils/util_misc.c.o
@@ -987,7 +987,7 @@ __/__/__/__/sample_c/module_sample/utils/util_misc.o: __/__/__/__/sample_c/modul
 
 # target to build an object file
 __/__/__/__/sample_c/module_sample/utils/util_misc.c.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/util_misc.c.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/util_misc.c.o
 .PHONY : __/__/__/__/sample_c/module_sample/utils/util_misc.c.o
 
 __/__/__/__/sample_c/module_sample/utils/util_misc.i: __/__/__/__/sample_c/module_sample/utils/util_misc.c.i
@@ -996,7 +996,7 @@ __/__/__/__/sample_c/module_sample/utils/util_misc.i: __/__/__/__/sample_c/modul
 
 # target to preprocess a source file
 __/__/__/__/sample_c/module_sample/utils/util_misc.c.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/util_misc.c.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/util_misc.c.i
 .PHONY : __/__/__/__/sample_c/module_sample/utils/util_misc.c.i
 
 __/__/__/__/sample_c/module_sample/utils/util_misc.s: __/__/__/__/sample_c/module_sample/utils/util_misc.c.s
@@ -1005,7 +1005,7 @@ __/__/__/__/sample_c/module_sample/utils/util_misc.s: __/__/__/__/sample_c/modul
 
 # target to generate assembly for a file
 __/__/__/__/sample_c/module_sample/utils/util_misc.c.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/util_misc.c.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/util_misc.c.s
 .PHONY : __/__/__/__/sample_c/module_sample/utils/util_misc.c.s
 
 __/__/__/__/sample_c/module_sample/utils/util_time.o: __/__/__/__/sample_c/module_sample/utils/util_time.c.o
@@ -1014,7 +1014,7 @@ __/__/__/__/sample_c/module_sample/utils/util_time.o: __/__/__/__/sample_c/modul
 
 # target to build an object file
 __/__/__/__/sample_c/module_sample/utils/util_time.c.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/util_time.c.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/util_time.c.o
 .PHONY : __/__/__/__/sample_c/module_sample/utils/util_time.c.o
 
 __/__/__/__/sample_c/module_sample/utils/util_time.i: __/__/__/__/sample_c/module_sample/utils/util_time.c.i
@@ -1023,7 +1023,7 @@ __/__/__/__/sample_c/module_sample/utils/util_time.i: __/__/__/__/sample_c/modul
 
 # target to preprocess a source file
 __/__/__/__/sample_c/module_sample/utils/util_time.c.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/util_time.c.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/util_time.c.i
 .PHONY : __/__/__/__/sample_c/module_sample/utils/util_time.c.i
 
 __/__/__/__/sample_c/module_sample/utils/util_time.s: __/__/__/__/sample_c/module_sample/utils/util_time.c.s
@@ -1032,7 +1032,7 @@ __/__/__/__/sample_c/module_sample/utils/util_time.s: __/__/__/__/sample_c/modul
 
 # target to generate assembly for a file
 __/__/__/__/sample_c/module_sample/utils/util_time.c.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/util_time.c.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/util_time.c.s
 .PHONY : __/__/__/__/sample_c/module_sample/utils/util_time.c.s
 
 __/__/__/__/sample_c/module_sample/waypoint_v2/test_waypoint_v2.o: __/__/__/__/sample_c/module_sample/waypoint_v2/test_waypoint_v2.c.o
@@ -1041,7 +1041,7 @@ __/__/__/__/sample_c/module_sample/waypoint_v2/test_waypoint_v2.o: __/__/__/__/s
 
 # target to build an object file
 __/__/__/__/sample_c/module_sample/waypoint_v2/test_waypoint_v2.c.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/waypoint_v2/test_waypoint_v2.c.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/waypoint_v2/test_waypoint_v2.c.o
 .PHONY : __/__/__/__/sample_c/module_sample/waypoint_v2/test_waypoint_v2.c.o
 
 __/__/__/__/sample_c/module_sample/waypoint_v2/test_waypoint_v2.i: __/__/__/__/sample_c/module_sample/waypoint_v2/test_waypoint_v2.c.i
@@ -1050,7 +1050,7 @@ __/__/__/__/sample_c/module_sample/waypoint_v2/test_waypoint_v2.i: __/__/__/__/s
 
 # target to preprocess a source file
 __/__/__/__/sample_c/module_sample/waypoint_v2/test_waypoint_v2.c.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/waypoint_v2/test_waypoint_v2.c.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/waypoint_v2/test_waypoint_v2.c.i
 .PHONY : __/__/__/__/sample_c/module_sample/waypoint_v2/test_waypoint_v2.c.i
 
 __/__/__/__/sample_c/module_sample/waypoint_v2/test_waypoint_v2.s: __/__/__/__/sample_c/module_sample/waypoint_v2/test_waypoint_v2.c.s
@@ -1059,7 +1059,7 @@ __/__/__/__/sample_c/module_sample/waypoint_v2/test_waypoint_v2.s: __/__/__/__/s
 
 # target to generate assembly for a file
 __/__/__/__/sample_c/module_sample/waypoint_v2/test_waypoint_v2.c.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/waypoint_v2/test_waypoint_v2.c.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/waypoint_v2/test_waypoint_v2.c.s
 .PHONY : __/__/__/__/sample_c/module_sample/waypoint_v2/test_waypoint_v2.c.s
 
 __/__/__/__/sample_c/module_sample/waypoint_v3/test_waypoint_v3.o: __/__/__/__/sample_c/module_sample/waypoint_v3/test_waypoint_v3.c.o
@@ -1068,7 +1068,7 @@ __/__/__/__/sample_c/module_sample/waypoint_v3/test_waypoint_v3.o: __/__/__/__/s
 
 # target to build an object file
 __/__/__/__/sample_c/module_sample/waypoint_v3/test_waypoint_v3.c.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/waypoint_v3/test_waypoint_v3.c.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/waypoint_v3/test_waypoint_v3.c.o
 .PHONY : __/__/__/__/sample_c/module_sample/waypoint_v3/test_waypoint_v3.c.o
 
 __/__/__/__/sample_c/module_sample/waypoint_v3/test_waypoint_v3.i: __/__/__/__/sample_c/module_sample/waypoint_v3/test_waypoint_v3.c.i
@@ -1077,7 +1077,7 @@ __/__/__/__/sample_c/module_sample/waypoint_v3/test_waypoint_v3.i: __/__/__/__/s
 
 # target to preprocess a source file
 __/__/__/__/sample_c/module_sample/waypoint_v3/test_waypoint_v3.c.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/waypoint_v3/test_waypoint_v3.c.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/waypoint_v3/test_waypoint_v3.c.i
 .PHONY : __/__/__/__/sample_c/module_sample/waypoint_v3/test_waypoint_v3.c.i
 
 __/__/__/__/sample_c/module_sample/waypoint_v3/test_waypoint_v3.s: __/__/__/__/sample_c/module_sample/waypoint_v3/test_waypoint_v3.c.s
@@ -1086,7 +1086,7 @@ __/__/__/__/sample_c/module_sample/waypoint_v3/test_waypoint_v3.s: __/__/__/__/s
 
 # target to generate assembly for a file
 __/__/__/__/sample_c/module_sample/waypoint_v3/test_waypoint_v3.c.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/waypoint_v3/test_waypoint_v3.c.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/waypoint_v3/test_waypoint_v3.c.s
 .PHONY : __/__/__/__/sample_c/module_sample/waypoint_v3/test_waypoint_v3.c.s
 
 __/__/__/__/sample_c/module_sample/widget/file_binary_array_list_en.o: __/__/__/__/sample_c/module_sample/widget/file_binary_array_list_en.c.o
@@ -1095,7 +1095,7 @@ __/__/__/__/sample_c/module_sample/widget/file_binary_array_list_en.o: __/__/__/
 
 # target to build an object file
 __/__/__/__/sample_c/module_sample/widget/file_binary_array_list_en.c.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/widget/file_binary_array_list_en.c.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/widget/file_binary_array_list_en.c.o
 .PHONY : __/__/__/__/sample_c/module_sample/widget/file_binary_array_list_en.c.o
 
 __/__/__/__/sample_c/module_sample/widget/file_binary_array_list_en.i: __/__/__/__/sample_c/module_sample/widget/file_binary_array_list_en.c.i
@@ -1104,7 +1104,7 @@ __/__/__/__/sample_c/module_sample/widget/file_binary_array_list_en.i: __/__/__/
 
 # target to preprocess a source file
 __/__/__/__/sample_c/module_sample/widget/file_binary_array_list_en.c.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/widget/file_binary_array_list_en.c.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/widget/file_binary_array_list_en.c.i
 .PHONY : __/__/__/__/sample_c/module_sample/widget/file_binary_array_list_en.c.i
 
 __/__/__/__/sample_c/module_sample/widget/file_binary_array_list_en.s: __/__/__/__/sample_c/module_sample/widget/file_binary_array_list_en.c.s
@@ -1113,7 +1113,7 @@ __/__/__/__/sample_c/module_sample/widget/file_binary_array_list_en.s: __/__/__/
 
 # target to generate assembly for a file
 __/__/__/__/sample_c/module_sample/widget/file_binary_array_list_en.c.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/widget/file_binary_array_list_en.c.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/widget/file_binary_array_list_en.c.s
 .PHONY : __/__/__/__/sample_c/module_sample/widget/file_binary_array_list_en.c.s
 
 __/__/__/__/sample_c/module_sample/widget/test_widget.o: __/__/__/__/sample_c/module_sample/widget/test_widget.c.o
@@ -1122,7 +1122,7 @@ __/__/__/__/sample_c/module_sample/widget/test_widget.o: __/__/__/__/sample_c/mo
 
 # target to build an object file
 __/__/__/__/sample_c/module_sample/widget/test_widget.c.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/widget/test_widget.c.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/widget/test_widget.c.o
 .PHONY : __/__/__/__/sample_c/module_sample/widget/test_widget.c.o
 
 __/__/__/__/sample_c/module_sample/widget/test_widget.i: __/__/__/__/sample_c/module_sample/widget/test_widget.c.i
@@ -1131,7 +1131,7 @@ __/__/__/__/sample_c/module_sample/widget/test_widget.i: __/__/__/__/sample_c/mo
 
 # target to preprocess a source file
 __/__/__/__/sample_c/module_sample/widget/test_widget.c.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/widget/test_widget.c.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/widget/test_widget.c.i
 .PHONY : __/__/__/__/sample_c/module_sample/widget/test_widget.c.i
 
 __/__/__/__/sample_c/module_sample/widget/test_widget.s: __/__/__/__/sample_c/module_sample/widget/test_widget.c.s
@@ -1140,7 +1140,7 @@ __/__/__/__/sample_c/module_sample/widget/test_widget.s: __/__/__/__/sample_c/mo
 
 # target to generate assembly for a file
 __/__/__/__/sample_c/module_sample/widget/test_widget.c.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/widget/test_widget.c.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/widget/test_widget.c.s
 .PHONY : __/__/__/__/sample_c/module_sample/widget/test_widget.c.s
 
 __/__/__/__/sample_c/module_sample/widget/test_widget_speaker.o: __/__/__/__/sample_c/module_sample/widget/test_widget_speaker.c.o
@@ -1149,7 +1149,7 @@ __/__/__/__/sample_c/module_sample/widget/test_widget_speaker.o: __/__/__/__/sam
 
 # target to build an object file
 __/__/__/__/sample_c/module_sample/widget/test_widget_speaker.c.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/widget/test_widget_speaker.c.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/widget/test_widget_speaker.c.o
 .PHONY : __/__/__/__/sample_c/module_sample/widget/test_widget_speaker.c.o
 
 __/__/__/__/sample_c/module_sample/widget/test_widget_speaker.i: __/__/__/__/sample_c/module_sample/widget/test_widget_speaker.c.i
@@ -1158,7 +1158,7 @@ __/__/__/__/sample_c/module_sample/widget/test_widget_speaker.i: __/__/__/__/sam
 
 # target to preprocess a source file
 __/__/__/__/sample_c/module_sample/widget/test_widget_speaker.c.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/widget/test_widget_speaker.c.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/widget/test_widget_speaker.c.i
 .PHONY : __/__/__/__/sample_c/module_sample/widget/test_widget_speaker.c.i
 
 __/__/__/__/sample_c/module_sample/widget/test_widget_speaker.s: __/__/__/__/sample_c/module_sample/widget/test_widget_speaker.c.s
@@ -1167,7 +1167,7 @@ __/__/__/__/sample_c/module_sample/widget/test_widget_speaker.s: __/__/__/__/sam
 
 # target to generate assembly for a file
 __/__/__/__/sample_c/module_sample/widget/test_widget_speaker.c.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/widget/test_widget_speaker.c.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/widget/test_widget_speaker.c.s
 .PHONY : __/__/__/__/sample_c/module_sample/widget/test_widget_speaker.c.s
 
 __/__/__/__/sample_c/module_sample/widget_interaction_test/file_binary_array_list_en.o: __/__/__/__/sample_c/module_sample/widget_interaction_test/file_binary_array_list_en.c.o
@@ -1176,7 +1176,7 @@ __/__/__/__/sample_c/module_sample/widget_interaction_test/file_binary_array_lis
 
 # target to build an object file
 __/__/__/__/sample_c/module_sample/widget_interaction_test/file_binary_array_list_en.c.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/widget_interaction_test/file_binary_array_list_en.c.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/widget_interaction_test/file_binary_array_list_en.c.o
 .PHONY : __/__/__/__/sample_c/module_sample/widget_interaction_test/file_binary_array_list_en.c.o
 
 __/__/__/__/sample_c/module_sample/widget_interaction_test/file_binary_array_list_en.i: __/__/__/__/sample_c/module_sample/widget_interaction_test/file_binary_array_list_en.c.i
@@ -1185,7 +1185,7 @@ __/__/__/__/sample_c/module_sample/widget_interaction_test/file_binary_array_lis
 
 # target to preprocess a source file
 __/__/__/__/sample_c/module_sample/widget_interaction_test/file_binary_array_list_en.c.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/widget_interaction_test/file_binary_array_list_en.c.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/widget_interaction_test/file_binary_array_list_en.c.i
 .PHONY : __/__/__/__/sample_c/module_sample/widget_interaction_test/file_binary_array_list_en.c.i
 
 __/__/__/__/sample_c/module_sample/widget_interaction_test/file_binary_array_list_en.s: __/__/__/__/sample_c/module_sample/widget_interaction_test/file_binary_array_list_en.c.s
@@ -1194,7 +1194,7 @@ __/__/__/__/sample_c/module_sample/widget_interaction_test/file_binary_array_lis
 
 # target to generate assembly for a file
 __/__/__/__/sample_c/module_sample/widget_interaction_test/file_binary_array_list_en.c.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/widget_interaction_test/file_binary_array_list_en.c.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/widget_interaction_test/file_binary_array_list_en.c.s
 .PHONY : __/__/__/__/sample_c/module_sample/widget_interaction_test/file_binary_array_list_en.c.s
 
 __/__/__/__/sample_c/module_sample/widget_interaction_test/test_widget_interaction.o: __/__/__/__/sample_c/module_sample/widget_interaction_test/test_widget_interaction.c.o
@@ -1203,7 +1203,7 @@ __/__/__/__/sample_c/module_sample/widget_interaction_test/test_widget_interacti
 
 # target to build an object file
 __/__/__/__/sample_c/module_sample/widget_interaction_test/test_widget_interaction.c.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/widget_interaction_test/test_widget_interaction.c.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/widget_interaction_test/test_widget_interaction.c.o
 .PHONY : __/__/__/__/sample_c/module_sample/widget_interaction_test/test_widget_interaction.c.o
 
 __/__/__/__/sample_c/module_sample/widget_interaction_test/test_widget_interaction.i: __/__/__/__/sample_c/module_sample/widget_interaction_test/test_widget_interaction.c.i
@@ -1212,7 +1212,7 @@ __/__/__/__/sample_c/module_sample/widget_interaction_test/test_widget_interacti
 
 # target to preprocess a source file
 __/__/__/__/sample_c/module_sample/widget_interaction_test/test_widget_interaction.c.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/widget_interaction_test/test_widget_interaction.c.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/widget_interaction_test/test_widget_interaction.c.i
 .PHONY : __/__/__/__/sample_c/module_sample/widget_interaction_test/test_widget_interaction.c.i
 
 __/__/__/__/sample_c/module_sample/widget_interaction_test/test_widget_interaction.s: __/__/__/__/sample_c/module_sample/widget_interaction_test/test_widget_interaction.c.s
@@ -1221,7 +1221,7 @@ __/__/__/__/sample_c/module_sample/widget_interaction_test/test_widget_interacti
 
 # target to generate assembly for a file
 __/__/__/__/sample_c/module_sample/widget_interaction_test/test_widget_interaction.c.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/widget_interaction_test/test_widget_interaction.c.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/widget_interaction_test/test_widget_interaction.c.s
 .PHONY : __/__/__/__/sample_c/module_sample/widget_interaction_test/test_widget_interaction.c.s
 
 __/__/__/__/sample_c/module_sample/xport/test_payload_xport.o: __/__/__/__/sample_c/module_sample/xport/test_payload_xport.c.o
@@ -1230,7 +1230,7 @@ __/__/__/__/sample_c/module_sample/xport/test_payload_xport.o: __/__/__/__/sampl
 
 # target to build an object file
 __/__/__/__/sample_c/module_sample/xport/test_payload_xport.c.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/xport/test_payload_xport.c.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/xport/test_payload_xport.c.o
 .PHONY : __/__/__/__/sample_c/module_sample/xport/test_payload_xport.c.o
 
 __/__/__/__/sample_c/module_sample/xport/test_payload_xport.i: __/__/__/__/sample_c/module_sample/xport/test_payload_xport.c.i
@@ -1239,7 +1239,7 @@ __/__/__/__/sample_c/module_sample/xport/test_payload_xport.i: __/__/__/__/sampl
 
 # target to preprocess a source file
 __/__/__/__/sample_c/module_sample/xport/test_payload_xport.c.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/xport/test_payload_xport.c.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/xport/test_payload_xport.c.i
 .PHONY : __/__/__/__/sample_c/module_sample/xport/test_payload_xport.c.i
 
 __/__/__/__/sample_c/module_sample/xport/test_payload_xport.s: __/__/__/__/sample_c/module_sample/xport/test_payload_xport.c.s
@@ -1248,7 +1248,7 @@ __/__/__/__/sample_c/module_sample/xport/test_payload_xport.s: __/__/__/__/sampl
 
 # target to generate assembly for a file
 __/__/__/__/sample_c/module_sample/xport/test_payload_xport.c.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/xport/test_payload_xport.c.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/xport/test_payload_xport.c.s
 .PHONY : __/__/__/__/sample_c/module_sample/xport/test_payload_xport.c.s
 
 __/__/__/module_sample/camera_manager/test_camera_manager_entry.o: __/__/__/module_sample/camera_manager/test_camera_manager_entry.cpp.o
@@ -1257,7 +1257,7 @@ __/__/__/module_sample/camera_manager/test_camera_manager_entry.o: __/__/__/modu
 
 # target to build an object file
 __/__/__/module_sample/camera_manager/test_camera_manager_entry.cpp.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/camera_manager/test_camera_manager_entry.cpp.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/camera_manager/test_camera_manager_entry.cpp.o
 .PHONY : __/__/__/module_sample/camera_manager/test_camera_manager_entry.cpp.o
 
 __/__/__/module_sample/camera_manager/test_camera_manager_entry.i: __/__/__/module_sample/camera_manager/test_camera_manager_entry.cpp.i
@@ -1266,7 +1266,7 @@ __/__/__/module_sample/camera_manager/test_camera_manager_entry.i: __/__/__/modu
 
 # target to preprocess a source file
 __/__/__/module_sample/camera_manager/test_camera_manager_entry.cpp.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/camera_manager/test_camera_manager_entry.cpp.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/camera_manager/test_camera_manager_entry.cpp.i
 .PHONY : __/__/__/module_sample/camera_manager/test_camera_manager_entry.cpp.i
 
 __/__/__/module_sample/camera_manager/test_camera_manager_entry.s: __/__/__/module_sample/camera_manager/test_camera_manager_entry.cpp.s
@@ -1275,7 +1275,7 @@ __/__/__/module_sample/camera_manager/test_camera_manager_entry.s: __/__/__/modu
 
 # target to generate assembly for a file
 __/__/__/module_sample/camera_manager/test_camera_manager_entry.cpp.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/camera_manager/test_camera_manager_entry.cpp.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/camera_manager/test_camera_manager_entry.cpp.s
 .PHONY : __/__/__/module_sample/camera_manager/test_camera_manager_entry.cpp.s
 
 __/__/__/module_sample/flight_controller/test_flight_controller_command_flying.o: __/__/__/module_sample/flight_controller/test_flight_controller_command_flying.cpp.o
@@ -1284,7 +1284,7 @@ __/__/__/module_sample/flight_controller/test_flight_controller_command_flying.o
 
 # target to build an object file
 __/__/__/module_sample/flight_controller/test_flight_controller_command_flying.cpp.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/flight_controller/test_flight_controller_command_flying.cpp.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/flight_controller/test_flight_controller_command_flying.cpp.o
 .PHONY : __/__/__/module_sample/flight_controller/test_flight_controller_command_flying.cpp.o
 
 __/__/__/module_sample/flight_controller/test_flight_controller_command_flying.i: __/__/__/module_sample/flight_controller/test_flight_controller_command_flying.cpp.i
@@ -1293,7 +1293,7 @@ __/__/__/module_sample/flight_controller/test_flight_controller_command_flying.i
 
 # target to preprocess a source file
 __/__/__/module_sample/flight_controller/test_flight_controller_command_flying.cpp.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/flight_controller/test_flight_controller_command_flying.cpp.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/flight_controller/test_flight_controller_command_flying.cpp.i
 .PHONY : __/__/__/module_sample/flight_controller/test_flight_controller_command_flying.cpp.i
 
 __/__/__/module_sample/flight_controller/test_flight_controller_command_flying.s: __/__/__/module_sample/flight_controller/test_flight_controller_command_flying.cpp.s
@@ -1302,7 +1302,7 @@ __/__/__/module_sample/flight_controller/test_flight_controller_command_flying.s
 
 # target to generate assembly for a file
 __/__/__/module_sample/flight_controller/test_flight_controller_command_flying.cpp.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/flight_controller/test_flight_controller_command_flying.cpp.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/flight_controller/test_flight_controller_command_flying.cpp.s
 .PHONY : __/__/__/module_sample/flight_controller/test_flight_controller_command_flying.cpp.s
 
 __/__/__/module_sample/flight_controller/test_flight_controller_entry.o: __/__/__/module_sample/flight_controller/test_flight_controller_entry.cpp.o
@@ -1311,7 +1311,7 @@ __/__/__/module_sample/flight_controller/test_flight_controller_entry.o: __/__/_
 
 # target to build an object file
 __/__/__/module_sample/flight_controller/test_flight_controller_entry.cpp.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/flight_controller/test_flight_controller_entry.cpp.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/flight_controller/test_flight_controller_entry.cpp.o
 .PHONY : __/__/__/module_sample/flight_controller/test_flight_controller_entry.cpp.o
 
 __/__/__/module_sample/flight_controller/test_flight_controller_entry.i: __/__/__/module_sample/flight_controller/test_flight_controller_entry.cpp.i
@@ -1320,7 +1320,7 @@ __/__/__/module_sample/flight_controller/test_flight_controller_entry.i: __/__/_
 
 # target to preprocess a source file
 __/__/__/module_sample/flight_controller/test_flight_controller_entry.cpp.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/flight_controller/test_flight_controller_entry.cpp.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/flight_controller/test_flight_controller_entry.cpp.i
 .PHONY : __/__/__/module_sample/flight_controller/test_flight_controller_entry.cpp.i
 
 __/__/__/module_sample/flight_controller/test_flight_controller_entry.s: __/__/__/module_sample/flight_controller/test_flight_controller_entry.cpp.s
@@ -1329,7 +1329,7 @@ __/__/__/module_sample/flight_controller/test_flight_controller_entry.s: __/__/_
 
 # target to generate assembly for a file
 __/__/__/module_sample/flight_controller/test_flight_controller_entry.cpp.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/flight_controller/test_flight_controller_entry.cpp.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/flight_controller/test_flight_controller_entry.cpp.s
 .PHONY : __/__/__/module_sample/flight_controller/test_flight_controller_entry.cpp.s
 
 __/__/__/module_sample/gimbal/test_gimbal_entry.o: __/__/__/module_sample/gimbal/test_gimbal_entry.cpp.o
@@ -1338,7 +1338,7 @@ __/__/__/module_sample/gimbal/test_gimbal_entry.o: __/__/__/module_sample/gimbal
 
 # target to build an object file
 __/__/__/module_sample/gimbal/test_gimbal_entry.cpp.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/gimbal/test_gimbal_entry.cpp.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/gimbal/test_gimbal_entry.cpp.o
 .PHONY : __/__/__/module_sample/gimbal/test_gimbal_entry.cpp.o
 
 __/__/__/module_sample/gimbal/test_gimbal_entry.i: __/__/__/module_sample/gimbal/test_gimbal_entry.cpp.i
@@ -1347,7 +1347,7 @@ __/__/__/module_sample/gimbal/test_gimbal_entry.i: __/__/__/module_sample/gimbal
 
 # target to preprocess a source file
 __/__/__/module_sample/gimbal/test_gimbal_entry.cpp.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/gimbal/test_gimbal_entry.cpp.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/gimbal/test_gimbal_entry.cpp.i
 .PHONY : __/__/__/module_sample/gimbal/test_gimbal_entry.cpp.i
 
 __/__/__/module_sample/gimbal/test_gimbal_entry.s: __/__/__/module_sample/gimbal/test_gimbal_entry.cpp.s
@@ -1356,7 +1356,7 @@ __/__/__/module_sample/gimbal/test_gimbal_entry.s: __/__/__/module_sample/gimbal
 
 # target to generate assembly for a file
 __/__/__/module_sample/gimbal/test_gimbal_entry.cpp.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/gimbal/test_gimbal_entry.cpp.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/gimbal/test_gimbal_entry.cpp.s
 .PHONY : __/__/__/module_sample/gimbal/test_gimbal_entry.cpp.s
 
 __/__/__/module_sample/hms_manager/hms_manager_entry.o: __/__/__/module_sample/hms_manager/hms_manager_entry.cpp.o
@@ -1365,7 +1365,7 @@ __/__/__/module_sample/hms_manager/hms_manager_entry.o: __/__/__/module_sample/h
 
 # target to build an object file
 __/__/__/module_sample/hms_manager/hms_manager_entry.cpp.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/hms_manager/hms_manager_entry.cpp.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/hms_manager/hms_manager_entry.cpp.o
 .PHONY : __/__/__/module_sample/hms_manager/hms_manager_entry.cpp.o
 
 __/__/__/module_sample/hms_manager/hms_manager_entry.i: __/__/__/module_sample/hms_manager/hms_manager_entry.cpp.i
@@ -1374,7 +1374,7 @@ __/__/__/module_sample/hms_manager/hms_manager_entry.i: __/__/__/module_sample/h
 
 # target to preprocess a source file
 __/__/__/module_sample/hms_manager/hms_manager_entry.cpp.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/hms_manager/hms_manager_entry.cpp.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/hms_manager/hms_manager_entry.cpp.i
 .PHONY : __/__/__/module_sample/hms_manager/hms_manager_entry.cpp.i
 
 __/__/__/module_sample/hms_manager/hms_manager_entry.s: __/__/__/module_sample/hms_manager/hms_manager_entry.cpp.s
@@ -1383,7 +1383,7 @@ __/__/__/module_sample/hms_manager/hms_manager_entry.s: __/__/__/module_sample/h
 
 # target to generate assembly for a file
 __/__/__/module_sample/hms_manager/hms_manager_entry.cpp.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/hms_manager/hms_manager_entry.cpp.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/hms_manager/hms_manager_entry.cpp.s
 .PHONY : __/__/__/module_sample/hms_manager/hms_manager_entry.cpp.s
 
 __/__/__/module_sample/liveview/dji_camera_image_handler.o: __/__/__/module_sample/liveview/dji_camera_image_handler.cpp.o
@@ -1392,7 +1392,7 @@ __/__/__/module_sample/liveview/dji_camera_image_handler.o: __/__/__/module_samp
 
 # target to build an object file
 __/__/__/module_sample/liveview/dji_camera_image_handler.cpp.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/liveview/dji_camera_image_handler.cpp.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/liveview/dji_camera_image_handler.cpp.o
 .PHONY : __/__/__/module_sample/liveview/dji_camera_image_handler.cpp.o
 
 __/__/__/module_sample/liveview/dji_camera_image_handler.i: __/__/__/module_sample/liveview/dji_camera_image_handler.cpp.i
@@ -1401,7 +1401,7 @@ __/__/__/module_sample/liveview/dji_camera_image_handler.i: __/__/__/module_samp
 
 # target to preprocess a source file
 __/__/__/module_sample/liveview/dji_camera_image_handler.cpp.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/liveview/dji_camera_image_handler.cpp.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/liveview/dji_camera_image_handler.cpp.i
 .PHONY : __/__/__/module_sample/liveview/dji_camera_image_handler.cpp.i
 
 __/__/__/module_sample/liveview/dji_camera_image_handler.s: __/__/__/module_sample/liveview/dji_camera_image_handler.cpp.s
@@ -1410,7 +1410,7 @@ __/__/__/module_sample/liveview/dji_camera_image_handler.s: __/__/__/module_samp
 
 # target to generate assembly for a file
 __/__/__/module_sample/liveview/dji_camera_image_handler.cpp.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/liveview/dji_camera_image_handler.cpp.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/liveview/dji_camera_image_handler.cpp.s
 .PHONY : __/__/__/module_sample/liveview/dji_camera_image_handler.cpp.s
 
 __/__/__/module_sample/liveview/dji_camera_stream_decoder.o: __/__/__/module_sample/liveview/dji_camera_stream_decoder.cpp.o
@@ -1419,7 +1419,7 @@ __/__/__/module_sample/liveview/dji_camera_stream_decoder.o: __/__/__/module_sam
 
 # target to build an object file
 __/__/__/module_sample/liveview/dji_camera_stream_decoder.cpp.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/liveview/dji_camera_stream_decoder.cpp.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/liveview/dji_camera_stream_decoder.cpp.o
 .PHONY : __/__/__/module_sample/liveview/dji_camera_stream_decoder.cpp.o
 
 __/__/__/module_sample/liveview/dji_camera_stream_decoder.i: __/__/__/module_sample/liveview/dji_camera_stream_decoder.cpp.i
@@ -1428,7 +1428,7 @@ __/__/__/module_sample/liveview/dji_camera_stream_decoder.i: __/__/__/module_sam
 
 # target to preprocess a source file
 __/__/__/module_sample/liveview/dji_camera_stream_decoder.cpp.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/liveview/dji_camera_stream_decoder.cpp.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/liveview/dji_camera_stream_decoder.cpp.i
 .PHONY : __/__/__/module_sample/liveview/dji_camera_stream_decoder.cpp.i
 
 __/__/__/module_sample/liveview/dji_camera_stream_decoder.s: __/__/__/module_sample/liveview/dji_camera_stream_decoder.cpp.s
@@ -1437,7 +1437,7 @@ __/__/__/module_sample/liveview/dji_camera_stream_decoder.s: __/__/__/module_sam
 
 # target to generate assembly for a file
 __/__/__/module_sample/liveview/dji_camera_stream_decoder.cpp.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/liveview/dji_camera_stream_decoder.cpp.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/liveview/dji_camera_stream_decoder.cpp.s
 .PHONY : __/__/__/module_sample/liveview/dji_camera_stream_decoder.cpp.s
 
 __/__/__/module_sample/liveview/test_liveview.o: __/__/__/module_sample/liveview/test_liveview.cpp.o
@@ -1446,7 +1446,7 @@ __/__/__/module_sample/liveview/test_liveview.o: __/__/__/module_sample/liveview
 
 # target to build an object file
 __/__/__/module_sample/liveview/test_liveview.cpp.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/liveview/test_liveview.cpp.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/liveview/test_liveview.cpp.o
 .PHONY : __/__/__/module_sample/liveview/test_liveview.cpp.o
 
 __/__/__/module_sample/liveview/test_liveview.i: __/__/__/module_sample/liveview/test_liveview.cpp.i
@@ -1455,7 +1455,7 @@ __/__/__/module_sample/liveview/test_liveview.i: __/__/__/module_sample/liveview
 
 # target to preprocess a source file
 __/__/__/module_sample/liveview/test_liveview.cpp.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/liveview/test_liveview.cpp.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/liveview/test_liveview.cpp.i
 .PHONY : __/__/__/module_sample/liveview/test_liveview.cpp.i
 
 __/__/__/module_sample/liveview/test_liveview.s: __/__/__/module_sample/liveview/test_liveview.cpp.s
@@ -1464,7 +1464,7 @@ __/__/__/module_sample/liveview/test_liveview.s: __/__/__/module_sample/liveview
 
 # target to generate assembly for a file
 __/__/__/module_sample/liveview/test_liveview.cpp.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/liveview/test_liveview.cpp.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/liveview/test_liveview.cpp.s
 .PHONY : __/__/__/module_sample/liveview/test_liveview.cpp.s
 
 __/__/__/module_sample/liveview/test_liveview_entry.o: __/__/__/module_sample/liveview/test_liveview_entry.cpp.o
@@ -1473,7 +1473,7 @@ __/__/__/module_sample/liveview/test_liveview_entry.o: __/__/__/module_sample/li
 
 # target to build an object file
 __/__/__/module_sample/liveview/test_liveview_entry.cpp.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/liveview/test_liveview_entry.cpp.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/liveview/test_liveview_entry.cpp.o
 .PHONY : __/__/__/module_sample/liveview/test_liveview_entry.cpp.o
 
 __/__/__/module_sample/liveview/test_liveview_entry.i: __/__/__/module_sample/liveview/test_liveview_entry.cpp.i
@@ -1482,7 +1482,7 @@ __/__/__/module_sample/liveview/test_liveview_entry.i: __/__/__/module_sample/li
 
 # target to preprocess a source file
 __/__/__/module_sample/liveview/test_liveview_entry.cpp.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/liveview/test_liveview_entry.cpp.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/liveview/test_liveview_entry.cpp.i
 .PHONY : __/__/__/module_sample/liveview/test_liveview_entry.cpp.i
 
 __/__/__/module_sample/liveview/test_liveview_entry.s: __/__/__/module_sample/liveview/test_liveview_entry.cpp.s
@@ -1491,7 +1491,7 @@ __/__/__/module_sample/liveview/test_liveview_entry.s: __/__/__/module_sample/li
 
 # target to generate assembly for a file
 __/__/__/module_sample/liveview/test_liveview_entry.cpp.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/liveview/test_liveview_entry.cpp.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/liveview/test_liveview_entry.cpp.s
 .PHONY : __/__/__/module_sample/liveview/test_liveview_entry.cpp.s
 
 __/__/__/module_sample/mobile/test_mobile_entry.o: __/__/__/module_sample/mobile/test_mobile_entry.cpp.o
@@ -1500,7 +1500,7 @@ __/__/__/module_sample/mobile/test_mobile_entry.o: __/__/__/module_sample/mobile
 
 # target to build an object file
 __/__/__/module_sample/mobile/test_mobile_entry.cpp.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/mobile/test_mobile_entry.cpp.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/mobile/test_mobile_entry.cpp.o
 .PHONY : __/__/__/module_sample/mobile/test_mobile_entry.cpp.o
 
 __/__/__/module_sample/mobile/test_mobile_entry.i: __/__/__/module_sample/mobile/test_mobile_entry.cpp.i
@@ -1509,7 +1509,7 @@ __/__/__/module_sample/mobile/test_mobile_entry.i: __/__/__/module_sample/mobile
 
 # target to preprocess a source file
 __/__/__/module_sample/mobile/test_mobile_entry.cpp.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/mobile/test_mobile_entry.cpp.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/mobile/test_mobile_entry.cpp.i
 .PHONY : __/__/__/module_sample/mobile/test_mobile_entry.cpp.i
 
 __/__/__/module_sample/mobile/test_mobile_entry.s: __/__/__/module_sample/mobile/test_mobile_entry.cpp.s
@@ -1518,7 +1518,7 @@ __/__/__/module_sample/mobile/test_mobile_entry.s: __/__/__/module_sample/mobile
 
 # target to generate assembly for a file
 __/__/__/module_sample/mobile/test_mobile_entry.cpp.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/mobile/test_mobile_entry.cpp.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/mobile/test_mobile_entry.cpp.s
 .PHONY : __/__/__/module_sample/mobile/test_mobile_entry.cpp.s
 
 __/__/__/module_sample/perception/test_perception.o: __/__/__/module_sample/perception/test_perception.cpp.o
@@ -1527,7 +1527,7 @@ __/__/__/module_sample/perception/test_perception.o: __/__/__/module_sample/perc
 
 # target to build an object file
 __/__/__/module_sample/perception/test_perception.cpp.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/perception/test_perception.cpp.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/perception/test_perception.cpp.o
 .PHONY : __/__/__/module_sample/perception/test_perception.cpp.o
 
 __/__/__/module_sample/perception/test_perception.i: __/__/__/module_sample/perception/test_perception.cpp.i
@@ -1536,7 +1536,7 @@ __/__/__/module_sample/perception/test_perception.i: __/__/__/module_sample/perc
 
 # target to preprocess a source file
 __/__/__/module_sample/perception/test_perception.cpp.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/perception/test_perception.cpp.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/perception/test_perception.cpp.i
 .PHONY : __/__/__/module_sample/perception/test_perception.cpp.i
 
 __/__/__/module_sample/perception/test_perception.s: __/__/__/module_sample/perception/test_perception.cpp.s
@@ -1545,7 +1545,7 @@ __/__/__/module_sample/perception/test_perception.s: __/__/__/module_sample/perc
 
 # target to generate assembly for a file
 __/__/__/module_sample/perception/test_perception.cpp.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/perception/test_perception.cpp.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/perception/test_perception.cpp.s
 .PHONY : __/__/__/module_sample/perception/test_perception.cpp.s
 
 __/__/__/module_sample/perception/test_perception_entry.o: __/__/__/module_sample/perception/test_perception_entry.cpp.o
@@ -1554,7 +1554,7 @@ __/__/__/module_sample/perception/test_perception_entry.o: __/__/__/module_sampl
 
 # target to build an object file
 __/__/__/module_sample/perception/test_perception_entry.cpp.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/perception/test_perception_entry.cpp.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/perception/test_perception_entry.cpp.o
 .PHONY : __/__/__/module_sample/perception/test_perception_entry.cpp.o
 
 __/__/__/module_sample/perception/test_perception_entry.i: __/__/__/module_sample/perception/test_perception_entry.cpp.i
@@ -1563,7 +1563,7 @@ __/__/__/module_sample/perception/test_perception_entry.i: __/__/__/module_sampl
 
 # target to preprocess a source file
 __/__/__/module_sample/perception/test_perception_entry.cpp.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/perception/test_perception_entry.cpp.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/perception/test_perception_entry.cpp.i
 .PHONY : __/__/__/module_sample/perception/test_perception_entry.cpp.i
 
 __/__/__/module_sample/perception/test_perception_entry.s: __/__/__/module_sample/perception/test_perception_entry.cpp.s
@@ -1572,7 +1572,7 @@ __/__/__/module_sample/perception/test_perception_entry.s: __/__/__/module_sampl
 
 # target to generate assembly for a file
 __/__/__/module_sample/perception/test_perception_entry.cpp.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/perception/test_perception_entry.cpp.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/perception/test_perception_entry.cpp.s
 .PHONY : __/__/__/module_sample/perception/test_perception_entry.cpp.s
 
 __/common/osal/osal.o: __/common/osal/osal.c.o
@@ -1581,7 +1581,7 @@ __/common/osal/osal.o: __/common/osal/osal.c.o
 
 # target to build an object file
 __/common/osal/osal.c.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/common/osal/osal.c.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/common/osal/osal.c.o
 .PHONY : __/common/osal/osal.c.o
 
 __/common/osal/osal.i: __/common/osal/osal.c.i
@@ -1590,7 +1590,7 @@ __/common/osal/osal.i: __/common/osal/osal.c.i
 
 # target to preprocess a source file
 __/common/osal/osal.c.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/common/osal/osal.c.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/common/osal/osal.c.i
 .PHONY : __/common/osal/osal.c.i
 
 __/common/osal/osal.s: __/common/osal/osal.c.s
@@ -1599,7 +1599,7 @@ __/common/osal/osal.s: __/common/osal/osal.c.s
 
 # target to generate assembly for a file
 __/common/osal/osal.c.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/common/osal/osal.c.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/common/osal/osal.c.s
 .PHONY : __/common/osal/osal.c.s
 
 __/common/osal/osal_fs.o: __/common/osal/osal_fs.c.o
@@ -1608,7 +1608,7 @@ __/common/osal/osal_fs.o: __/common/osal/osal_fs.c.o
 
 # target to build an object file
 __/common/osal/osal_fs.c.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/common/osal/osal_fs.c.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/common/osal/osal_fs.c.o
 .PHONY : __/common/osal/osal_fs.c.o
 
 __/common/osal/osal_fs.i: __/common/osal/osal_fs.c.i
@@ -1617,7 +1617,7 @@ __/common/osal/osal_fs.i: __/common/osal/osal_fs.c.i
 
 # target to preprocess a source file
 __/common/osal/osal_fs.c.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/common/osal/osal_fs.c.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/common/osal/osal_fs.c.i
 .PHONY : __/common/osal/osal_fs.c.i
 
 __/common/osal/osal_fs.s: __/common/osal/osal_fs.c.s
@@ -1626,7 +1626,7 @@ __/common/osal/osal_fs.s: __/common/osal/osal_fs.c.s
 
 # target to generate assembly for a file
 __/common/osal/osal_fs.c.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/common/osal/osal_fs.c.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/common/osal/osal_fs.c.s
 .PHONY : __/common/osal/osal_fs.c.s
 
 __/common/osal/osal_socket.o: __/common/osal/osal_socket.c.o
@@ -1635,7 +1635,7 @@ __/common/osal/osal_socket.o: __/common/osal/osal_socket.c.o
 
 # target to build an object file
 __/common/osal/osal_socket.c.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/common/osal/osal_socket.c.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/common/osal/osal_socket.c.o
 .PHONY : __/common/osal/osal_socket.c.o
 
 __/common/osal/osal_socket.i: __/common/osal/osal_socket.c.i
@@ -1644,7 +1644,7 @@ __/common/osal/osal_socket.i: __/common/osal/osal_socket.c.i
 
 # target to preprocess a source file
 __/common/osal/osal_socket.c.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/common/osal/osal_socket.c.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/common/osal/osal_socket.c.i
 .PHONY : __/common/osal/osal_socket.c.i
 
 __/common/osal/osal_socket.s: __/common/osal/osal_socket.c.s
@@ -1653,7 +1653,7 @@ __/common/osal/osal_socket.s: __/common/osal/osal_socket.c.s
 
 # target to generate assembly for a file
 __/common/osal/osal_socket.c.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/common/osal/osal_socket.c.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/common/osal/osal_socket.c.s
 .PHONY : __/common/osal/osal_socket.c.s
 
 application/application.o: application/application.cpp.o
@@ -1662,7 +1662,7 @@ application/application.o: application/application.cpp.o
 
 # target to build an object file
 application/application.cpp.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/application/application.cpp.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/application/application.cpp.o
 .PHONY : application/application.cpp.o
 
 application/application.i: application/application.cpp.i
@@ -1671,7 +1671,7 @@ application/application.i: application/application.cpp.i
 
 # target to preprocess a source file
 application/application.cpp.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/application/application.cpp.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/application/application.cpp.i
 .PHONY : application/application.cpp.i
 
 application/application.s: application/application.cpp.s
@@ -1680,8 +1680,35 @@ application/application.s: application/application.cpp.s
 
 # target to generate assembly for a file
 application/application.cpp.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/application/application.cpp.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/application/application.cpp.s
 .PHONY : application/application.cpp.s
+
+application/lidar.o: application/lidar.cpp.o
+
+.PHONY : application/lidar.o
+
+# target to build an object file
+application/lidar.cpp.o:
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/application/lidar.cpp.o
+.PHONY : application/lidar.cpp.o
+
+application/lidar.i: application/lidar.cpp.i
+
+.PHONY : application/lidar.i
+
+# target to preprocess a source file
+application/lidar.cpp.i:
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/application/lidar.cpp.i
+.PHONY : application/lidar.cpp.i
+
+application/lidar.s: application/lidar.cpp.s
+
+.PHONY : application/lidar.s
+
+# target to generate assembly for a file
+application/lidar.cpp.s:
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/application/lidar.cpp.s
+.PHONY : application/lidar.cpp.s
 
 application/main.o: application/main.cpp.o
 
@@ -1689,7 +1716,7 @@ application/main.o: application/main.cpp.o
 
 # target to build an object file
 application/main.cpp.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/application/main.cpp.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/application/main.cpp.o
 .PHONY : application/main.cpp.o
 
 application/main.i: application/main.cpp.i
@@ -1698,7 +1725,7 @@ application/main.i: application/main.cpp.i
 
 # target to preprocess a source file
 application/main.cpp.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/application/main.cpp.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/application/main.cpp.i
 .PHONY : application/main.cpp.i
 
 application/main.s: application/main.cpp.s
@@ -1707,7 +1734,7 @@ application/main.s: application/main.cpp.s
 
 # target to generate assembly for a file
 application/main.cpp.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/application/main.cpp.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/application/main.cpp.s
 .PHONY : application/main.cpp.s
 
 hal/hal_network.o: hal/hal_network.c.o
@@ -1716,7 +1743,7 @@ hal/hal_network.o: hal/hal_network.c.o
 
 # target to build an object file
 hal/hal_network.c.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/hal/hal_network.c.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/hal/hal_network.c.o
 .PHONY : hal/hal_network.c.o
 
 hal/hal_network.i: hal/hal_network.c.i
@@ -1725,7 +1752,7 @@ hal/hal_network.i: hal/hal_network.c.i
 
 # target to preprocess a source file
 hal/hal_network.c.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/hal/hal_network.c.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/hal/hal_network.c.i
 .PHONY : hal/hal_network.c.i
 
 hal/hal_network.s: hal/hal_network.c.s
@@ -1734,7 +1761,7 @@ hal/hal_network.s: hal/hal_network.c.s
 
 # target to generate assembly for a file
 hal/hal_network.c.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/hal/hal_network.c.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/hal/hal_network.c.s
 .PHONY : hal/hal_network.c.s
 
 hal/hal_uart.o: hal/hal_uart.c.o
@@ -1743,7 +1770,7 @@ hal/hal_uart.o: hal/hal_uart.c.o
 
 # target to build an object file
 hal/hal_uart.c.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/hal/hal_uart.c.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/hal/hal_uart.c.o
 .PHONY : hal/hal_uart.c.o
 
 hal/hal_uart.i: hal/hal_uart.c.i
@@ -1752,7 +1779,7 @@ hal/hal_uart.i: hal/hal_uart.c.i
 
 # target to preprocess a source file
 hal/hal_uart.c.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/hal/hal_uart.c.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/hal/hal_uart.c.i
 .PHONY : hal/hal_uart.c.i
 
 hal/hal_uart.s: hal/hal_uart.c.s
@@ -1761,7 +1788,7 @@ hal/hal_uart.s: hal/hal_uart.c.s
 
 # target to generate assembly for a file
 hal/hal_uart.c.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/hal/hal_uart.c.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/hal/hal_uart.c.s
 .PHONY : hal/hal_uart.c.s
 
 hal/hal_usb_bulk.o: hal/hal_usb_bulk.c.o
@@ -1770,7 +1797,7 @@ hal/hal_usb_bulk.o: hal/hal_usb_bulk.c.o
 
 # target to build an object file
 hal/hal_usb_bulk.c.o:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/hal/hal_usb_bulk.c.o
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/hal/hal_usb_bulk.c.o
 .PHONY : hal/hal_usb_bulk.c.o
 
 hal/hal_usb_bulk.i: hal/hal_usb_bulk.c.i
@@ -1779,7 +1806,7 @@ hal/hal_usb_bulk.i: hal/hal_usb_bulk.c.i
 
 # target to preprocess a source file
 hal/hal_usb_bulk.c.i:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/hal/hal_usb_bulk.c.i
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/hal/hal_usb_bulk.c.i
 .PHONY : hal/hal_usb_bulk.c.i
 
 hal/hal_usb_bulk.s: hal/hal_usb_bulk.c.s
@@ -1788,7 +1815,7 @@ hal/hal_usb_bulk.s: hal/hal_usb_bulk.c.s
 
 # target to generate assembly for a file
 hal/hal_usb_bulk.c.s:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/hal/hal_usb_bulk.c.s
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(MAKE) -f samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/build.make samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/hal/hal_usb_bulk.c.s
 .PHONY : hal/hal_usb_bulk.c.s
 
 # Help Target
@@ -1972,6 +1999,9 @@ help:
 	@echo "... application/application.o"
 	@echo "... application/application.i"
 	@echo "... application/application.s"
+	@echo "... application/lidar.o"
+	@echo "... application/lidar.i"
+	@echo "... application/lidar.s"
 	@echo "... application/main.o"
 	@echo "... application/main.i"
 	@echo "... application/main.s"
@@ -1995,6 +2025,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/ibm/DJIOnboardSDK/DJIOnboardSDK_Jetson_Dev/Payload-SDK-3.8.1/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/ibm/DJIOnboardSDK/LiDARApplication/include/Payload-SDK-3.8.1/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

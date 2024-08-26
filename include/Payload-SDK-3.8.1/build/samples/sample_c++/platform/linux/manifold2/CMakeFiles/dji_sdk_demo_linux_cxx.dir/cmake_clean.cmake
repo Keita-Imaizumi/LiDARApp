@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/dji_sdk_demo_linux_cxx.dir/application/application.cpp.o"
+  "CMakeFiles/dji_sdk_demo_linux_cxx.dir/application/lidar.cpp.o"
   "CMakeFiles/dji_sdk_demo_linux_cxx.dir/application/main.cpp.o"
   "CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/liveview/dji_camera_image_handler.cpp.o"
   "CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/liveview/dji_camera_stream_decoder.cpp.o"
