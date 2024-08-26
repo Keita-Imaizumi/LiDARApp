@@ -60,7 +60,7 @@ void PointCloudCallback(uint32_t handle, const uint8_t dev_type,
             int32_t z = p_point_data[i].z;
 
             // X軸の値が0〜1000mmの範囲かを確認
-            if (x > 0 && x < 100) {
+            if (x >= 0 && x <= 1000 && y == 0 && z == 0) {
                 filtered_points.push_back(p_point_data[i]);
             }
         }
